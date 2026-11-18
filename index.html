@@ -1558,8 +1558,17 @@ body {
         <span>📑</span> All Gaps Registry
       </button>
     </div>
-    <div class="blueprint-badge">
-      <span>📐</span> Blueprint: 14 Sections Architecture
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="blueprint-badge" id="storageStatusBadge" title="Offline local storage active">
+        <span>💾</span> Local Storage (Offline)
+      </div>
+      <button type="button" class="btn btn-secondary btn-sm" id="backupJsonBtn" title="Save full backup file to your PC">
+        💾 Backup
+      </button>
+      <button type="button" class="btn btn-secondary btn-sm" id="restoreJsonBtn" title="Restore data from a saved JSON backup">
+        📂 Restore
+      </button>
+      <input type="file" id="restoreBackupInput" accept=".json,application/json" style="display: none;">
     </div>
   </nav>
 
@@ -2541,7 +2550,22 @@ class GapDataManager {
   constructor() {
     this.sections = [];
     this.gaps = [];
+    this.storageMode = 'browser'; // 'pc-disk' when running via offline PC server, 'browser' when file://
+    this.dataFilePath = '';
     this.init();
+  }
+
+  _syncSectionLabels() {
+    if (Array.isArray(this.sections)) {
+      this.sections.forEach(s => {
+        const def = DEFAULT_SECTIONS.find(d => d.id === s.id);
+        if (def) {
+          s.name = def.name;
+          s.code = def.code;
+          s.category = def.category;
+        }
+      });
+    }
   }
 
   init() {
@@ -2550,17 +2574,7 @@ class GapDataManager {
       if (saved) {
         const parsed = JSON.parse(saved);
         this.sections = parsed.sections || DEFAULT_SECTIONS;
-        // Sync any updated section names and labels from DEFAULT_SECTIONS
-        if (Array.isArray(this.sections)) {
-          this.sections.forEach(s => {
-            const def = DEFAULT_SECTIONS.find(d => d.id === s.id);
-            if (def) {
-              s.name = def.name;
-              s.code = def.code;
-              s.category = def.category;
-            }
-          });
-        }
+        this._syncSectionLabels();
         this.gaps = Array.isArray(parsed.gaps) ? parsed.gaps : generateSeedGaps();
         return;
       }
@@ -2568,6 +2582,94 @@ class GapDataManager {
       console.warn('LocalStorage error, using defaults:', e);
     }
     this.resetToDefaults();
+  }
+
+  // Connect to local PC disk storage backend when running as Offline PC App
+  async initPcStorage(onSyncCallback) {
+    if (typeof window === 'undefined' || !window.location || !window.location.protocol.startsWith('http')) {
+      this.storageMode = 'browser';
+      if (typeof onSyncCallback === 'function') onSyncCallback(this.storageMode, '');
+      return;
+    }
+
+    try {
+      const healthRes = await fetch('/api/health', { cache: 'no-store' });
+      if (!healthRes.ok) return;
+      const health = await healthRes.json();
+      if (!health || !health.ok) return;
+
+      this.storageMode = 'pc-disk';
+      this.dataFilePath = health.dataFile || 'data/rmp-gap-data.json';
+
+      const dataRes = await fetch('/api/data', { cache: 'no-store' });
+      if (dataRes.ok) {
+        const remote = await dataRes.json();
+        if (remote && remote.exists && Array.isArray(remote.gaps)) {
+          this.sections = Array.isArray(remote.sections) && remote.sections.length > 0
+            ? remote.sections
+            : JSON.parse(JSON.stringify(DEFAULT_SECTIONS));
+          this._syncSectionLabels();
+          this.gaps = remote.gaps;
+          this._saveToBrowserCache();
+        } else {
+          // First run on PC disk: persist initial / migrated data immediately to disk
+          await this.saveToPcDisk();
+        }
+      }
+
+      if (typeof onSyncCallback === 'function') {
+        onSyncCallback(this.storageMode, this.dataFilePath);
+      }
+    } catch (e) {
+      // Running as static file or offline without server: fall back cleanly to browser localStorage
+      this.storageMode = 'browser';
+      if (typeof onSyncCallback === 'function') onSyncCallback(this.storageMode, '');
+    }
+  }
+
+  async saveToPcDisk() {
+    if (this.storageMode !== 'pc-disk') return false;
+    try {
+      const res = await fetch('/api/data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sections: this.sections,
+          gaps: this.gaps
+        })
+      });
+      if (res.ok) {
+        const saved = await res.json();
+        if (saved && Array.isArray(saved.gaps)) {
+          // Keep rewritten /api/uploads/... paths in memory so future saves stay lightweight
+          this.gaps = saved.gaps;
+          this._saveToBrowserCache();
+        }
+        return true;
+      }
+    } catch (e) {
+      console.error('Failed to save to PC local disk:', e);
+    }
+    return false;
+  }
+
+  _saveToBrowserCache() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        sections: this.sections,
+        gaps: this.gaps,
+        lastUpdated: new Date().toISOString()
+      }));
+      return true;
+    } catch (e) {
+      if (this.storageMode !== 'pc-disk') {
+        console.error('Failed to save to localStorage:', e);
+        if (e && (e.name === 'QuotaExceededError' || e.code === 22)) {
+          alert('Browser storage limit reached! Run the Offline PC App launcher (RMP Gap Analyzer.vbs) for unlimited local PC disk storage.');
+        }
+      }
+      return false;
+    }
   }
 
   resetToDefaults() {
@@ -2582,20 +2684,12 @@ class GapDataManager {
   }
 
   save() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        sections: this.sections,
-        gaps: this.gaps,
-        lastUpdated: new Date().toISOString()
-      }));
+    const localOk = this._saveToBrowserCache();
+    if (this.storageMode === 'pc-disk') {
+      this.saveToPcDisk();
       return true;
-    } catch (e) {
-      console.error('Failed to save to localStorage:', e);
-      if (e && (e.name === 'QuotaExceededError' || e.code === 22)) {
-        alert('Browser storage limit reached! Try uploading fewer or smaller images, or deleting old resolved gaps.');
-      }
-      return false;
     }
+    return localOk;
   }
 
   getSections() {
@@ -3710,6 +3804,34 @@ class GapApp {
     this.bindEvents();
     this.populateSectionDropdowns();
     this.render();
+
+    // Connect to local PC hard-drive storage if running via Offline PC App
+    if (typeof window.gapDataStore.initPcStorage === 'function') {
+      window.gapDataStore.initPcStorage((mode, dataPath) => {
+        this.updateStorageBadge(mode, dataPath);
+        this.selectedChartSectionIds = new Set(window.gapDataStore.getSections().map(s => s.id));
+        this.populateSectionDropdowns();
+        this.render();
+      });
+    }
+  }
+
+  updateStorageBadge(mode, dataPath) {
+    const badge = document.getElementById('storageStatusBadge');
+    if (!badge) return;
+    if (mode === 'pc-disk') {
+      badge.style.background = '#ecfdf5';
+      badge.style.borderColor = '#a7f3d0';
+      badge.style.color = '#065f46';
+      badge.title = `All data & photos auto-saved to PC disk: ${dataPath}`;
+      badge.innerHTML = '<span>💾</span> PC Local Storage Active';
+    } else {
+      badge.style.background = '#f1f5f9';
+      badge.style.borderColor = '#e2e8f0';
+      badge.style.color = '#475569';
+      badge.title = 'Data saved in local browser storage (offline)';
+      badge.innerHTML = '<span>💾</span> Local Storage (Offline)';
+    }
   }
 
   initChart() {
@@ -3793,6 +3915,23 @@ class GapApp {
           window.gapDataStore.clearAllData();
           this.render();
           this.showToast('All gap data cleared! Ready for fresh records.');
+        }
+      });
+    }
+
+    // Offline PC Backup & Restore JSON
+    const backupBtn = document.getElementById('backupJsonBtn');
+    if (backupBtn) {
+      backupBtn.addEventListener('click', () => this.downloadBackupJSON());
+    }
+    const restoreBtn = document.getElementById('restoreJsonBtn');
+    const restoreInput = document.getElementById('restoreBackupInput');
+    if (restoreBtn && restoreInput) {
+      restoreBtn.addEventListener('click', () => restoreInput.click());
+      restoreInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+          this.handleRestoreBackup(e.target.files[0]);
+          e.target.value = '';
         }
       });
     }
@@ -4635,6 +4774,67 @@ class GapApp {
     document.body.removeChild(link);
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     this.showToast('Excel workbook (.xlsx) exported successfully!');
+  }
+
+  async downloadBackupJSON() {
+    const sectionsCopy = JSON.parse(JSON.stringify(window.gapDataStore.sections));
+    const gapsCopy = JSON.parse(JSON.stringify(window.gapDataStore.gaps));
+
+    // Inline any PC-disk /api/uploads/... images into portable Data URLs inside the backup
+    for (const gap of gapsCopy) {
+      if (!Array.isArray(gap.images)) continue;
+      for (const img of gap.images) {
+        if (img && typeof img.dataUrl === 'string' && img.dataUrl.startsWith('/api/uploads/')) {
+          try {
+            const resp = await fetch(img.dataUrl);
+            if (resp.ok) {
+              const blob = await resp.blob();
+              img.dataUrl = await new Promise((resolve) => {
+                const fr = new FileReader();
+                fr.onloadend = () => resolve(fr.result);
+                fr.readAsDataURL(blob);
+              });
+            }
+          } catch (_) {}
+        }
+      }
+    }
+
+    const payload = JSON.stringify({
+      version: '1.0',
+      exportedAt: new Date().toISOString(),
+      sections: sectionsCopy,
+      gaps: gapsCopy
+    }, null, 2);
+
+    const blob = new Blob([payload], { type: 'application/json;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    const dateStamp = typeof formatLocalDate === 'function' ? formatLocalDate(new Date()) : Date.now();
+    link.setAttribute('href', url);
+    link.setAttribute('download', `rmp_gap_backup_${dateStamp}.json`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    this.showToast('Full PC backup (.json) saved successfully!');
+  }
+
+  handleRestoreBackup(file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      if (!confirm('Restore data from this backup file? Current records will be replaced.')) return;
+      const ok = window.gapDataStore.importJSON(e.target.result);
+      if (ok) {
+        this.selectedChartSectionIds = new Set(window.gapDataStore.getSections().map(s => s.id));
+        this.populateSectionDropdowns();
+        this.render();
+        this.showToast('Backup restored & saved to local PC storage!');
+      } else {
+        alert('Invalid backup JSON file.');
+      }
+    };
+    reader.readAsText(file);
   }
 
   showToast(message) {
