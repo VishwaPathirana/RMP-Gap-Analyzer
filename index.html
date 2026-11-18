@@ -1,0 +1,4665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMP Gap Analyzer - 14 Plant Sections & Inspection System</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <style>
+/* ==========================================================================
+   RMP GAP ANALYZER - ENTERPRISE QUALITY & PLANT AUDIT SYSTEM
+   ========================================================================== */
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50: #f8fafc;
+  
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --danger-text: #991b1b;
+  
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #92400e;
+  
+  --success: #059669;
+  --success-bg: #ecfdf5;
+  --success-border: #a7f3d0;
+  --success-text: #065f46;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+  
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f1f5f9;
+  color: var(--slate-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+.app-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-bottom: 3px solid var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-icon {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(241, 102, 35, 0.35);
+  flex-shrink: 0;
+}
+
+.brand-icon img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-text h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ffffff;
+}
+
+.brand-tag {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #7dd3fc;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.brand-sub {
+  font-size: 0.775rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Secondary Navigation Bar */
+.nav-bar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--slate-200);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-xs);
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-tab {
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--slate-600);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.nav-tab:hover {
+  color: var(--primary);
+  background: var(--primary-50);
+}
+
+.nav-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: var(--primary-50);
+}
+
+.nav-tab .badge {
+  background: var(--slate-100);
+  color: var(--slate-700);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.nav-tab.active .badge {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.blueprint-badge {
+  font-size: 0.775rem;
+  color: var(--slate-600);
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   TIME PERIOD TOOLBAR (As per 2 week, As per month, As per year)
+   ========================================================================== */
+.period-bar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--slate-200);
+  padding: 0.85rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.period-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.period-label {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--slate-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.period-pills {
+  display: inline-flex;
+  background: var(--slate-100);
+  padding: 3px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--slate-200);
+}
+
+.period-btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--slate-600);
+  border-radius: calc(var(--radius-md) - 3px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.period-btn:hover {
+  color: var(--slate-900);
+}
+
+.period-btn.active {
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.period-date-display {
+  font-size: 0.825rem;
+  color: var(--slate-600);
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   LAYOUT & CONTAINER
+   ========================================================================== */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem 4rem;
+}
+
+/* Executive KPI Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.kpi-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--slate-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--slate-300);
+}
+
+.kpi-info h3 {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.45rem;
+}
+
+.kpi-value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  line-height: 1.1;
+  font-feature-settings: "tnum";
+}
+
+.kpi-sub {
+  font-size: 0.775rem;
+  color: var(--slate-500);
+  margin-top: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.kpi-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.kpi-icon.red { background: #fee2e2; color: #dc2626; }
+.kpi-icon.amber { background: #fef3c7; color: #d97706; }
+.kpi-icon.blue { background: #dbeafe; color: #2563eb; }
+.kpi-icon.green { background: #d1fae5; color: #059669; }
+
+/* Blueprint Reference Callout Banner */
+.sketch-banner {
+  background: linear-gradient(to right, #eff6ff, #f8fafc);
+  border: 1px solid #bfdbfe;
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.sketch-banner-text {
+  font-size: 0.875rem;
+  color: var(--slate-800);
+}
+
+.sketch-banner-text strong {
+  color: var(--primary);
+}
+
+/* View Switcher */
+.view-panel {
+  display: none;
+}
+
+.view-panel.active {
+  display: block;
+  animation: panelSlide 0.25s ease-out;
+}
+
+@keyframes panelSlide {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Standard Content Card */
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--slate-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+}
+
+.card-header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--slate-200);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #ffffff;
+}
+
+.card-title-group h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-title-group p {
+  font-size: 0.8rem;
+  color: var(--slate-500);
+  margin-top: 0.2rem;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-body {
+  padding: 1.5rem 1.75rem;
+}
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.data-table th {
+  background: var(--slate-50);
+  color: var(--slate-600);
+  font-weight: 700;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 2px solid var(--slate-200);
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--slate-200);
+  vertical-align: middle;
+  color: var(--slate-800);
+}
+
+.data-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.sec-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.sec-code-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--slate-100);
+  color: var(--slate-700);
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--slate-300);
+}
+
+.sec-title {
+  font-weight: 700;
+  color: var(--slate-900);
+  font-size: 0.925rem;
+}
+
+.sec-cat {
+  font-size: 0.75rem;
+  color: var(--slate-500);
+}
+
+/* Count of Gap Pill */
+.gap-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 30px;
+  padding: 0 0.65rem;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  font-size: 0.875rem;
+  font-feature-settings: "tnum";
+}
+
+.gap-count-badge.zero {
+  background: var(--slate-100);
+  color: var(--slate-500);
+}
+
+.gap-count-badge.low {
+  background: var(--primary-50);
+  color: var(--primary-700);
+  border: 1px solid var(--primary-100);
+}
+
+.gap-count-badge.medium {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.gap-count-badge.high {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-border);
+}
+
+/* Rate Progress Bar */
+.rate-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 150px;
+}
+
+.rate-val {
+  font-weight: 700;
+  font-size: 0.875rem;
+  min-width: 50px;
+  font-feature-settings: "tnum";
+}
+
+.rate-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: var(--slate-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.rate-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.rate-bar-fill.good { background: var(--success); }
+.rate-bar-fill.warning { background: var(--warning); }
+.rate-bar-fill.critical { background: var(--danger); }
+
+/* Severity pills */
+.severity-pills {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.sev-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.sev-pill.crit { background: #fee2e2; color: #991b1b; }
+.sev-pill.maj { background: #fef3c7; color: #92400e; }
+.sev-pill.min { background: #dbeafe; color: #1e40af; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--slate-700);
+  border-color: var(--slate-300);
+}
+
+.btn-secondary:hover {
+  background: var(--slate-50);
+  border-color: var(--slate-400);
+  color: var(--slate-900);
+}
+
+.btn-excel {
+  background: #107c41;
+  color: #ffffff;
+  border-color: #0e6b37;
+  box-shadow: 0 1px 3px rgba(16, 124, 65, 0.25);
+}
+
+.btn-excel:hover {
+  background: #0c6333;
+  border-color: #09522a;
+  transform: translateY(-1px);
+}
+
+.btn-danger-outline {
+  background: #ffffff;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.btn-danger-outline:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.775rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   CHART VIEW
+   ========================================================================== */
+.chart-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.chart-metric-switch {
+  display: inline-flex;
+  background: var(--slate-100);
+  padding: 3px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--slate-200);
+}
+
+.chart-metric-btn {
+  padding: 0.4rem 0.95rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--slate-600);
+  border-radius: calc(var(--radius-md) - 3px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.chart-metric-btn.active {
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section-filter-bar {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.15rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chart-filter-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.chart-filter-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.chart-filter-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--slate-700);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.chart-filter-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chart-filter-count {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-50);
+  border: 1px solid var(--primary-100);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.section-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.section-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--slate-300);
+  background: #ffffff;
+  color: var(--slate-500);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.section-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.section-chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.25);
+}
+
+.section-chip .chip-count {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.05rem 0.35rem;
+  border-radius: var(--radius-full);
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.section-chip.active .chip-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.canvas-container {
+  width: 100%;
+  position: relative;
+  min-height: 420px;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+}
+
+.canvas-container canvas {
+  width: 100%;
+  display: block;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 1.25rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--slate-200);
+  font-size: 0.825rem;
+  color: var(--slate-600);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legend-color.good { background: #10b981; }
+.legend-color.warning { background: #f59e0b; }
+.legend-color.critical { background: #ef4444; }
+.legend-color.pareto { background: #8b5cf6; }
+
+/* Leaderboard */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.75rem;
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 992px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-rank-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--slate-200);
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.section-rank-item:hover {
+  background: var(--slate-50);
+}
+
+.section-rank-item:last-child {
+  border-bottom: none;
+}
+
+.rank-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.rank-num {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--slate-400);
+  width: 24px;
+}
+
+.rank-num.top1 { color: #dc2626; }
+.rank-num.top2 { color: #ea580c; }
+.rank-num.top3 { color: #d97706; }
+
+/* ==========================================================================
+   AUDIT CHECKLIST VIEW
+   ========================================================================== */
+.audit-header-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  background: var(--slate-50);
+  padding: 1.35rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--slate-200);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--slate-700);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.form-control {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--slate-900);
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.checklist-card {
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.checklist-card.is-false {
+  border-color: var(--danger-border);
+  background: #fffafa;
+}
+
+.checklist-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.checklist-question {
+  font-weight: 600;
+  font-size: 0.925rem;
+  color: var(--slate-900);
+}
+
+.checklist-cat {
+  font-size: 0.75rem;
+  color: var(--slate-500);
+  margin-top: 0.2rem;
+}
+
+.toggle-group {
+  display: inline-flex;
+  background: var(--slate-100);
+  padding: 3px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--slate-200);
+}
+
+.toggle-btn {
+  padding: 0.4rem 0.95rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  border-radius: calc(var(--radius-md) - 3px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.toggle-btn.btn-pass.active {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.toggle-btn.btn-fail.active {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.fault-details-box {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #fca5a5;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  animation: boxFade 0.15s ease;
+}
+
+@keyframes boxFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   MODALS
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+  animation: modalPop 0.2s ease-out;
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  max-width: 650px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--slate-200);
+}
+
+.modal-header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--slate-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--slate-400);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--slate-800);
+}
+
+.modal-body {
+  padding: 1.75rem;
+}
+
+.modal-footer {
+  padding: 1rem 1.75rem;
+  border-top: 1px solid var(--slate-200);
+  background: var(--slate-50);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* ==========================================================================
+   FULL-PAGE SECTION DETAIL VIEW
+   ========================================================================== */
+.section-detail-topbar {
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.section-detail-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-detail-title-group h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  letter-spacing: -0.3px;
+}
+
+.section-detail-subtitle {
+  font-size: 0.85rem;
+  color: var(--slate-500);
+  margin-top: 0.15rem;
+}
+
+.section-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.gap-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .gap-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gap-detail-card {
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.gap-detail-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--slate-300);
+}
+
+.gap-detail-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.gap-detail-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--slate-900);
+}
+
+.gap-detail-card-meta {
+  font-size: 0.8rem;
+  color: var(--slate-500);
+}
+
+.gap-detail-card-desc {
+  font-size: 0.875rem;
+  color: var(--slate-700);
+  line-height: 1.55;
+}
+
+.gap-detail-action-box {
+  font-size: 0.825rem;
+  background: var(--slate-50);
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary);
+  color: var(--slate-800);
+}
+
+.gap-detail-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--slate-100);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   IMAGE UPLOAD & FALSE-WISE GALLERY PREVIEW
+   ========================================================================== */
+.image-upload-zone {
+  border: 2px dashed var(--slate-300);
+  border-radius: var(--radius-md);
+  background: var(--slate-50);
+  padding: 1.15rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.image-upload-zone:hover,
+.image-upload-zone.drag-over {
+  border-color: var(--primary);
+  background: var(--primary-50);
+}
+
+.image-upload-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.image-upload-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--slate-700);
+}
+
+.image-upload-hint {
+  font-size: 0.725rem;
+  color: var(--slate-500);
+}
+
+.upload-preview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.upload-thumb-item {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--slate-300);
+  background: var(--slate-100);
+}
+
+.upload-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.upload-thumb-remove {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(15, 23, 42, 0.8);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.upload-thumb-remove:hover {
+  background: #dc2626;
+}
+
+/* False-wise Evidence Gallery inside Section Detail Cards */
+.gap-evidence-section {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--slate-200);
+}
+
+.gap-evidence-label {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.gap-evidence-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.gap-evidence-thumb {
+  position: relative;
+  width: 88px;
+  height: 68px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--slate-300);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  background: var(--slate-100);
+}
+
+.gap-evidence-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.gap-evidence-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gap-evidence-zoom {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #ffffff;
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* Full-Screen Image Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 3000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+  animation: modalPop 0.18s ease-out;
+}
+
+.lightbox-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), transparent);
+}
+
+.lightbox-caption-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.lightbox-caption-sub {
+  font-size: 0.775rem;
+  color: #cbd5e1;
+}
+
+.lightbox-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.lightbox-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92vw;
+  max-height: 78vh;
+}
+
+.lightbox-stage img {
+  max-width: 90vw;
+  max-height: 78vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  background: #0f172a;
+}
+
+.lightbox-nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(15, 23, 42, 0.75);
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.lightbox-nav-btn.prev { left: 1.5rem; }
+.lightbox-nav-btn.next { right: 1.5rem; }
+
+/* ==========================================================================
+   TOAST NOTIFICATIONS
+   ========================================================================== */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.toast {
+  background: var(--slate-900);
+  color: #ffffff;
+  padding: 0.85rem 1.35rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-left: 4px solid var(--primary);
+  animation: toastPop 0.25s ease-out;
+}
+
+@keyframes toastPop {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .app-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1rem; }
+  .nav-bar { overflow-x: auto; padding: 0 1rem; }
+  .period-bar { flex-direction: column; align-items: flex-start; padding: 1rem; }
+  .container { padding: 1rem 1rem 3rem; }
+  .fault-details-box { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Application Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <div class="brand-icon"><img src="data:image/png;base64,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" alt="RMP Logo"></div>
+      <div class="brand-text">
+        <h1>
+          RMP Gap Analyzer
+          <span class="brand-tag">Plant Inspection</span>
+        </h1>
+        <div class="brand-sub">Section-wise False (Defect) Tracker & Time Period Analytics</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-danger-outline btn-sm" id="clearDataBtn" title="Clear all recorded gaps and start fresh">
+        🗑️ Clear All Data
+      </button>
+      <button class="btn btn-excel btn-sm" id="exportExcelBtn" title="Export styled Excel workbook (.xlsx)">
+        📗 Export Excel
+      </button>
+      <button class="btn btn-primary btn-sm" id="openAddGapBtn">
+        + Log New Gap
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation Bar (Pages) -->
+  <nav class="nav-bar">
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-view="table">
+        <span>📋</span> Section Gap Tracker
+        <span class="badge" id="tabBadge14">14 Sections</span>
+      </button>
+      <button class="nav-tab" data-view="chart">
+        <span>📊</span> Bar Chart & Analytics
+      </button>
+      <button class="nav-tab" data-view="registry">
+        <span>📑</span> All Gaps Registry
+      </button>
+    </div>
+    <div class="blueprint-badge">
+      <span>📐</span> Blueprint: 14 Sections Architecture
+    </div>
+  </nav>
+
+  <!-- Time Period Evaluation Bar (Directly from Blueprint Sketch) -->
+  <div class="period-bar">
+    <div class="period-group">
+      <div class="period-label">
+        <span>⏱️</span> Evaluation Period:
+      </div>
+      <div class="period-pills">
+        <button class="period-btn active" data-period="2week">
+          ⚡ As per 2 week
+        </button>
+        <button class="period-btn" data-period="month">
+          📅 As per month
+        </button>
+        <button class="period-btn" data-period="year">
+          📆 As per year
+        </button>
+        <button class="period-btn" data-period="all">
+          🌐 All Records
+        </button>
+      </div>
+    </div>
+    <div class="period-date-display" id="periodDateDisplay">
+      <span>📅</span> Showing Last 14 Days (Bi-weekly evaluation)
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- KPI Summary Row -->
+    <section class="kpi-grid" id="globalKpiGrid">
+      <div class="kpi-card">
+        <div class="kpi-info">
+          <h3>Total Gaps (False)</h3>
+          <div class="kpi-value" id="kpiTotalGaps">0</div>
+          <div class="kpi-sub">Across evaluated sections</div>
+        </div>
+        <div class="kpi-icon red">⚠️</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-info">
+          <h3>Facility Gap Rate</h3>
+          <div class="kpi-value" id="kpiOverallRate">0.0%</div>
+          <div class="kpi-sub">Total false vs total checkpoints</div>
+        </div>
+        <div class="kpi-icon amber">📉</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-info">
+          <h3>Highest Gap Area</h3>
+          <div class="kpi-value" id="kpiTopSection" style="font-size: 1.35rem;">-</div>
+          <div class="kpi-sub">Needs primary corrective action</div>
+        </div>
+        <div class="kpi-icon blue">🏭</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-info">
+          <h3>Active Open Gaps</h3>
+          <div class="kpi-value" id="kpiOpenGaps">0</div>
+          <div class="kpi-sub">Pending resolution</div>
+        </div>
+        <div class="kpi-icon green">🔧</div>
+      </div>
+    </section>
+
+    <!-- VIEW 1: Section Gap Table (Page 1) -->
+    <div class="view-panel active" id="view-table">
+      <div class="sketch-banner">
+        <div class="sketch-banner-text">
+          💡 <strong>Blueprint Page 1:</strong> Section-wise gap count and percentage tracking across all <strong>14 plant sections</strong> (Yard A/B/C, Wet A/B/C, Milk, PDDC, DC, FGC, CC, Stores, Canteen, Outside Enviroment). Click <strong>"+ Add False"</strong> on any section to log findings.
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="app.switchView('chart')">
+          View Bar Chart →
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>
+              <span>📋</span> Section-wise Gap Tally & Evaluation
+            </h2>
+            <p>Count of false inspection findings & calculated gap percentage per area</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-excel btn-sm" onclick="app.downloadExcel()" title="Download Excel spreadsheet (.xlsx)">
+              📗 Export Excel
+            </button>
+          </div>
+        </div>
+
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width: 40px;">#</th>
+                  <th>Section (14 Plant Areas)</th>
+                  <th style="width: 140px;">Count of Gap (False)</th>
+                  <th style="width: 180px;">% Gap Rate</th>
+                  <th style="width: 130px;">% Facility Share</th>
+                  <th>Severity</th>
+                  <th>Status</th>
+                  <th style="text-align: right; width: 170px;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="sectionTableBody">
+                <!-- Dynamically generated rows for 14 sections -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 2: Bar Chart & Analytics (Page 2) -->
+    <div class="view-panel" id="view-chart">
+      <div class="sketch-banner">
+        <div class="sketch-banner-text">
+          📊 <strong>Blueprint Page 2:</strong> Bar chart visualization with <strong>Sections on X-axis</strong> and <strong>% on Y-axis</strong>, dynamically evaluated <strong>(as per 2 week)</strong>, <strong>(as per month)</strong>, or <strong>(as per year)</strong>. Hover on any bar for detailed stats.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2>
+              <span>📊</span> Section Gap Analysis Chart
+              <span id="chartTitlePeriod" style="color: var(--primary); font-weight: 600;">(As per 2 week)</span>
+            </h2>
+            <p>Visual gap distribution across the 14 plant zones with benchmark threshold</p>
+          </div>
+
+          <div class="card-actions">
+            <div class="chart-metric-switch">
+              <button class="chart-metric-btn active" data-metric="percent">
+                % Gap Rate
+              </button>
+              <button class="chart-metric-btn" data-metric="count">
+                Count of Gaps
+              </button>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="togglePareto">
+              📈 Pareto 80/20 View
+            </button>
+            <button class="btn btn-secondary btn-sm" id="exportChartBtn">
+              📷 Export PNG
+            </button>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <!-- Section-wise Chart Filter Bar -->
+          <div class="chart-section-filter-bar">
+            <div class="chart-filter-top">
+              <div class="chart-filter-left">
+                <span class="chart-filter-label"><span>🏭</span> Filter Section:</span>
+                <select class="form-control" id="chartSectionDropdown" onchange="app.onChartDropdownFilter(this.value)" style="width: auto; min-width: 220px; padding: 0.4rem 0.75rem; font-size: 0.825rem;">
+                  <option value="all">All Sections (14)</option>
+                </select>
+              </div>
+              <div class="chart-filter-right">
+                <span class="chart-filter-count" id="chartFilterCountBadge">Showing 14 / 14 Sections</span>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="app.selectAllChartSections()">Select All</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="app.selectGapOnlyChartSections()">With Gaps Only</button>
+              </div>
+            </div>
+            <div class="section-chip-list" id="chartSectionChips">
+              <!-- Dynamically rendered 14 section toggle chips -->
+            </div>
+          </div>
+
+          <div class="canvas-container">
+            <canvas id="gapBarChart"></canvas>
+          </div>
+
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-color good"></span>
+              <span>Low Gaps (&lt; 5.0% - Within Tolerance)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color warning"></span>
+              <span>Moderate Gaps (5.0% - 15.0% - Action Needed)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color critical"></span>
+              <span>Critical Gaps (&gt; 15.0% - High Priority)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color pareto"></span>
+              <span>Pareto Cumulative % Line (80/20 Rule)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Insights Grid -->
+      <div class="analytics-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2><span>🚨</span> Priority Defect Leaderboard</h2>
+              <p>Top sections contributing the highest volume of false findings</p>
+            </div>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div id="leaderboardList">
+              <!-- Dynamically rendered top 5 sections -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h2><span>🎯</span> Quality & Safety Rule</h2>
+              <p>Target guidelines for plant auditing</p>
+            </div>
+          </div>
+          <div class="card-body" style="font-size: 0.85rem; color: #334155; line-height: 1.6;">
+            <p style="margin-bottom: 0.75rem;">
+              <strong>Benchmark Standard:</strong> Maintain less than <strong>5.0% gap rate</strong> across all zones.
+            </p>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.75rem;">
+              <li><strong>Critical Sections:</strong> Require immediate CAPA within 24 hours.</li>
+              <li><strong>Bi-weekly Evaluations:</strong> Catch recurring wear and operational drift early.</li>
+              <li><strong>Continuous Tracking:</strong> Every logged False updates the live Pareto analysis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 3: All Gaps Registry (Page 3) -->
+    <div class="view-panel" id="view-registry">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2><span>📑</span> Complete Defect & Gap Registry</h2>
+            <p>All recorded non-conformances with corrective actions and status tracking</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary btn-sm" onclick="app.openAddGapModal()">
+              + Log New Gap
+            </button>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="form-group">
+              <label>Filter by Section</label>
+              <select class="form-control" id="registryFilterSection" onchange="app.renderRegistry()">
+                <option value="all">All Sections (14)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Filter by Status</label>
+              <select class="form-control" id="registryFilterStatus" onchange="app.renderRegistry()">
+                <option value="all">All Statuses</option>
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Resolved">Resolved</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Search Findings</label>
+              <input type="text" class="form-control" id="registrySearch" placeholder="Search keywords..." oninput="app.renderRegistry()">
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Title & Description</th>
+                  <th>Date</th>
+                  <th>Severity</th>
+                  <th>Status</th>
+                  <th>Auditor</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="registryTableBody">
+                <!-- Dynamically rendered -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 4: Full-Page Section Details -->
+    <div class="view-panel" id="view-section-detail">
+      <div class="section-detail-topbar">
+        <div class="section-detail-title-group">
+          <button class="btn btn-secondary" onclick="app.goBackFromSectionDetail()">
+            ← Back
+          </button>
+          <div>
+            <h2 id="secPageTitle">Section Name</h2>
+            <div class="section-detail-subtitle" id="secPageCat">Category &amp; Description</div>
+          </div>
+        </div>
+        <div class="section-detail-actions">
+          <select class="form-control" id="secPageSwitcher" onchange="app.openSectionDetailsModal(this.value)" style="width: auto; min-width: 210px;" title="Jump to another section">
+            <!-- Dynamically populated -->
+          </select>
+          <button class="btn btn-primary" id="secPageAddGapBtn">
+            + Add False / Gap
+          </button>
+        </div>
+      </div>
+
+      <!-- Full-Page Section KPI Row -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-info">
+            <h3>Total Gaps (False)</h3>
+            <div class="kpi-value" id="secPageCount" style="color: #dc2626;">0</div>
+            <div class="kpi-sub">In active evaluation period</div>
+          </div>
+          <div class="kpi-icon red">⚠️</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-info">
+            <h3>Gap Rate (%)</h3>
+            <div class="kpi-value" id="secPageRate" style="color: var(--primary);">0%</div>
+            <div class="kpi-sub" id="secPageChecksSub">Evaluated checkpoints</div>
+          </div>
+          <div class="kpi-icon blue">📉</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-info">
+            <h3>Open Gaps</h3>
+            <div class="kpi-value" id="secPageOpen" style="color: #d97706;">0</div>
+            <div class="kpi-sub">Pending resolution</div>
+          </div>
+          <div class="kpi-icon amber">🔧</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-info">
+            <h3>Resolved Gaps</h3>
+            <div class="kpi-value" id="secPageResolved" style="color: #059669;">0</div>
+            <div class="kpi-sub">Completed corrective actions</div>
+          </div>
+          <div class="kpi-icon green">✓</div>
+        </div>
+      </section>
+
+      <!-- Recorded Gaps Full-Page Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title-group">
+            <h2><span>📋</span> Recorded Gaps in Current Evaluation Period</h2>
+            <p id="secPagePeriodNote">Full list of false findings, corrective actions, and resolution controls</p>
+          </div>
+          <div class="card-actions">
+            <select class="form-control" id="secPageStatusFilter" onchange="app.renderSectionDetailsPage()" style="width: auto;">
+              <option value="all">All Statuses</option>
+              <option value="Open">Open</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Resolved">Resolved</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div id="secPageGapsList">
+            <!-- Dynamically populated full-page cards -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- MODAL: Add New Gap / False -->
+  <div class="modal-overlay" id="newGapModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <span>⚠️</span> Log False Finding / Gap
+        </h3>
+        <button class="modal-close" onclick="app.closeModal('newGapModal')">&times;</button>
+      </div>
+
+      <form id="newGapForm">
+        <div class="modal-body">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label>Plant Section *</label>
+            <select class="form-control" id="gapSectionSelect" required>
+              <!-- Filled dynamically -->
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label>Defect Title / Gap Name *</label>
+            <input type="text" class="form-control" id="gapTitle" required placeholder="e.g. Broken drainage cover, temperature drift">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="form-group">
+              <label>Date Identified *</label>
+              <input type="date" class="form-control" id="gapDate" required>
+            </div>
+            <div class="form-group">
+              <label>Severity Level *</label>
+              <select class="form-control" id="gapSeverity">
+                <option value="Minor">Minor (Observation)</option>
+                <option value="Major" selected>Major (Non-conformance)</option>
+                <option value="Critical">Critical (Immediate Hazard)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="form-group">
+              <label>Category *</label>
+              <select class="form-control" id="gapCategory">
+                <option value="Hygiene">Hygiene & Sanitation</option>
+                <option value="Safety">Safety & PPE</option>
+                <option value="Equipment">Equipment & Calibration</option>
+                <option value="Facility">Facility & Maintenance</option>
+                <option value="Pest Control">Pest Control</option>
+                <option value="Environment">Environment & Waste</option>
+                <option value="Compliance">Documentation & Logs</option>
+                <option value="5S">5S Organization</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Auditor / Inspector</label>
+              <input type="text" class="form-control" id="gapAuditor" value="Lead Inspector">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label>Detailed Description</label>
+            <textarea class="form-control" id="gapDesc" rows="3" placeholder="Provide full details of the gap observed..."></textarea>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label>Corrective Action / Remediation</label>
+            <textarea class="form-control" id="gapAction" rows="2" placeholder="Recommended fix, work order, or SOP assignment..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Evidence Photos (Optional)</label>
+            <div class="image-upload-zone" id="gapImageDropZone" onclick="document.getElementById('gapImageInput').click()">
+              <div class="image-upload-icon">📷</div>
+              <div class="image-upload-text">Click to upload or drag &amp; drop photos here</div>
+              <div class="image-upload-hint">Supports JPG, PNG, WebP (multiple images allowed, auto-optimized)</div>
+            </div>
+            <input type="file" id="gapImageInput" accept="image/*" multiple style="display: none;">
+            <div class="upload-preview-grid" id="gapImagePreviewList"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="app.closeModal('newGapModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Gap Finding</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hidden file input for attaching photos to existing false findings -->
+  <input type="file" id="existingGapPhotoInput" accept="image/*" multiple style="display: none;">
+
+  <!-- LIGHTBOX: Full-Screen Evidence Image Preview -->
+  <div class="lightbox-overlay" id="imageLightboxModal" onclick="if (event.target === this) app.closeLightbox()">
+    <div class="lightbox-topbar">
+      <div>
+        <div class="lightbox-caption-title" id="lightboxTitle">Evidence Photo</div>
+        <div class="lightbox-caption-sub" id="lightboxMeta">1 / 1</div>
+      </div>
+      <div class="lightbox-controls">
+        <button type="button" class="btn btn-secondary btn-sm" id="lightboxDownloadBtn">⬇ Download</button>
+        <button type="button" class="btn btn-secondary btn-sm" style="color: #dc2626;" id="lightboxDeleteBtn">🗑 Remove Photo</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="app.closeLightbox()">✕ Close</button>
+      </div>
+    </div>
+
+    <button type="button" class="lightbox-nav-btn prev" id="lightboxPrevBtn" onclick="app.navigateLightbox(-1)">‹</button>
+    <div class="lightbox-stage">
+      <img id="lightboxImage" src="" alt="Evidence photo preview">
+    </div>
+    <button type="button" class="lightbox-nav-btn next" id="lightboxNextBtn" onclick="app.navigateLightbox(1)">›</button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Embedded Zero-Dependency Scripts (Guaranteed 100% Offline & File-Protocol Execution) -->
+  <script>
+// RMP Gap Analyzer - Core Data & Storage Management
+// Specifically mapped from plant audit blueprint (14 Sections & Time Period Evaluations)
+
+const STORAGE_KEY = 'rmp_gap_analyzer_v1';
+
+// The 14 plant sections exactly as defined on the blueprint
+const DEFAULT_SECTIONS = [
+  { id: 'sec-1', code: 'YRD-A', name: 'Yard A', category: 'Yards & Logistics', icon: 'truck', desc: 'Raw material intake, primary yard & bay area' },
+  { id: 'sec-2', code: 'YRD-B', name: 'Yard B', category: 'Yards & Logistics', icon: 'truck', desc: 'Secondary storage yard, pallet stacking & circulation' },
+  { id: 'sec-3', code: 'YRD-C', name: 'Yard C', category: 'Yards & Logistics', icon: 'truck', desc: 'Vehicle parking, waste staging & container bay' },
+  { id: 'sec-4', code: 'WET-A', name: 'Wet A', category: 'Wet Processing', icon: 'droplets', desc: 'Washing, raw processing & preliminary wet area' },
+  { id: 'sec-5', code: 'WET-B', name: 'Wet B', category: 'Wet Processing', icon: 'droplets', desc: 'Main liquid processing, CIP & wet blending lines' },
+  { id: 'sec-6', code: 'WET-C', name: 'Wet C', category: 'Wet Processing', icon: 'droplets', desc: 'Filtration, separation & drainage treatment area' },
+  { id: 'sec-7', code: 'MLK', name: 'Milk', category: 'Dairy Processing', icon: 'milk', desc: 'Milk reception, chilling, storage silos & pasteurization' },
+  { id: 'sec-8', code: 'PDDC', name: 'PDDC', category: 'Dairy Processing', icon: 'flask', desc: 'Product Development & Dairy Center / Drying unit' },
+  { id: 'sec-9', code: 'DC', name: 'DC', category: 'Dispatch & Store', icon: 'archive', desc: 'Distribution Center, sorting & order dispatch' },
+  { id: 'sec-10', code: 'FGC', name: 'FGC', category: 'Finished Goods', icon: 'package-check', desc: 'Finished Goods Center & temperature-controlled bay' },
+  { id: 'sec-11', code: 'CC', name: 'CC', category: 'Cooling / Control', icon: 'thermometer-snowflake', desc: 'Cold Chain / Central Control cooling systems' },
+  { id: 'sec-12', code: 'STR', name: 'Stores', category: 'Warehouse', icon: 'layers', desc: 'General raw material, packaging & chemical storage' },
+  { id: 'sec-13', code: 'CNT', name: 'Canteen', category: 'Welfare & Catering', icon: 'utensils', desc: 'Staff canteen, dining hall & food preparation area' },
+  { id: 'sec-14', code: 'OUT', name: 'Outside Enviroment', category: 'Environment', icon: 'trees', desc: 'Perimeter fencing, drainage channels & outdoor grounds' }
+];
+
+// Helper to format a Date object as local YYYY-MM-DD
+function formatLocalDate(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+// Helper to generate seed dates relative to today's live local date
+function getDateOffset(daysAgo) {
+  const d = new Date();
+  d.setDate(d.getDate() - daysAgo);
+  return formatLocalDate(d);
+}
+
+// Generate rich sample data across 2-week, month, and year periods
+function generateSeedGaps() {
+  return [
+    // --- 2-WEEK PERIOD (0 - 13 days ago: Nov 04 - Nov 17, 2026) ---
+    {
+      id: 'gap-001',
+      sectionId: 'sec-1',
+      date: getDateOffset(1),
+      title: 'Oil spillage in raw intake bay',
+      category: 'Safety',
+      severity: 'Major',
+      status: 'Open',
+      auditor: 'Kamal Perera',
+      description: 'Hydraulic oil leakage detected near intake bay 2. Slip hazard identified.',
+      correctiveAction: 'Apply absorbent granules immediately and service forklift hydraulic seal.',
+      isFalse: true
+    },
+    {
+      id: 'gap-002',
+      sectionId: 'sec-1',
+      date: getDateOffset(5),
+      title: 'Damaged guard rail near ramp',
+      category: 'Facility',
+      severity: 'Minor',
+      status: 'In Progress',
+      auditor: 'Nimal Silva',
+      description: 'End section of pedestrian yellow guard rail bent outward.',
+      correctiveAction: 'Work order sent to engineering for welding and re-anchoring.',
+      isFalse: true
+    },
+    {
+      id: 'gap-003',
+      sectionId: 'sec-2',
+      date: getDateOffset(3),
+      title: 'Pallet stack exceeding height limit',
+      category: 'Safety',
+      severity: 'Major',
+      status: 'Open',
+      auditor: 'Kamal Perera',
+      description: 'Wooden pallets stacked 22 high against maximum standard of 15.',
+      correctiveAction: 'Re-stack pallets according to safety guidelines; brief yard operators.',
+      isFalse: true
+    },
+    {
+      id: 'gap-004',
+      sectionId: 'sec-4',
+      date: getDateOffset(2),
+      title: 'Standing water pool near wash station',
+      category: 'Hygiene',
+      severity: 'Critical',
+      status: 'Open',
+      auditor: 'Dr. Fernando',
+      description: 'Floor slope issue causing standing water pool near wash conveyor exit.',
+      correctiveAction: 'Clear floor drain trap and inspect drainage incline with civil team.',
+      isFalse: true
+    },
+    {
+      id: 'gap-005',
+      sectionId: 'sec-4',
+      date: getDateOffset(8),
+      title: 'CIP chemical dosing log missing',
+      category: 'Compliance',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Sunil Jayawardena',
+      description: 'Evening shift chemical concentration log was incomplete.',
+      correctiveAction: 'Log completed retrospectively from DCS historian; operator coached.',
+      isFalse: true
+    },
+    {
+      id: 'gap-006',
+      sectionId: 'sec-5',
+      date: getDateOffset(4),
+      title: 'Gasket weep on valve manifold V-104',
+      category: 'Equipment',
+      severity: 'Major',
+      status: 'In Progress',
+      auditor: 'Dr. Fernando',
+      description: 'Minor moisture seepage detected on blend line butterfly valve seal.',
+      correctiveAction: 'Replace food-grade EPDM gasket during weekend scheduled shutdown.',
+      isFalse: true
+    },
+    {
+      id: 'gap-007',
+      sectionId: 'sec-7',
+      date: getDateOffset(2),
+      title: 'Silo 3 temperature probe drift',
+      category: 'Equipment',
+      severity: 'Critical',
+      status: 'Open',
+      auditor: 'Dr. Fernando',
+      description: 'Dual probe discrepancy: Probe A reads 4.2C while Probe B reads 5.8C.',
+      correctiveAction: 'Perform reference calibration check and replace faulty RTD sensor.',
+      isFalse: true
+    },
+    {
+      id: 'gap-008',
+      sectionId: 'sec-8',
+      date: getDateOffset(7),
+      title: 'Dust accumulation on spray dryer exhaust hood',
+      category: 'Hygiene',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Anura Bandara',
+      description: 'Fine dairy powder residue settled on upper extraction hood.',
+      correctiveAction: 'Vacuum cleaned and included in daily sanitation checklist.',
+      isFalse: true
+    },
+    {
+      id: 'gap-009',
+      sectionId: 'sec-9',
+      date: getDateOffset(6),
+      title: 'Dispatch roller conveyor sensor misaligned',
+      category: 'Equipment',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Kamal Perera',
+      description: 'Photoelectric sensor on Lane 3 causing intermittent conveyor stoppage.',
+      correctiveAction: 'Optical sensor realigned and cleaned with isopropyl alcohol.',
+      isFalse: true
+    },
+    {
+      id: 'gap-010',
+      sectionId: 'sec-10',
+      date: getDateOffset(9),
+      title: 'Carton labeling barcode scan failure',
+      category: 'Quality',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Nimal Silva',
+      description: 'Thermal print ribbon faint on batch #20261108.',
+      correctiveAction: 'Thermal printhead cleaned and heat setting adjusted +2.',
+      isFalse: true
+    },
+    {
+      id: 'gap-011',
+      sectionId: 'sec-11',
+      date: getDateOffset(3),
+      title: 'Cold room air curtain velocity below spec',
+      category: 'Facility',
+      severity: 'Major',
+      status: 'Open',
+      auditor: 'Kamal Perera',
+      description: 'Inflow air curtain over entrance door measuring 2.1 m/s (spec >= 3.5 m/s).',
+      correctiveAction: 'Service intake fan blower motor and inspect air ducting.',
+      isFalse: true
+    },
+    {
+      id: 'gap-012',
+      sectionId: 'sec-12',
+      date: getDateOffset(10),
+      title: 'Chemical drum bund capacity exceeded',
+      category: 'Safety',
+      severity: 'Critical',
+      status: 'In Progress',
+      auditor: 'Sunil Jayawardena',
+      description: 'Extra disinfectant drums stored inside spill bund leaving < 110% volume.',
+      correctiveAction: 'Transfer surplus drums to external approved chemical storage.',
+      isFalse: true
+    },
+    {
+      id: 'gap-013',
+      sectionId: 'sec-13',
+      date: getDateOffset(11),
+      title: 'Hand wash station soap dispenser empty',
+      category: 'Hygiene',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Anura Bandara',
+      description: 'Canteen entry hygiene wash station had depleted antibacterial soap.',
+      correctiveAction: 'Refilled immediately; housekeeping shift hand-off checklist updated.',
+      isFalse: true
+    },
+    {
+      id: 'gap-014',
+      sectionId: 'sec-14',
+      date: getDateOffset(5),
+      title: 'Broken pest mesh over storm drain outlet',
+      category: 'Pest Control',
+      severity: 'Major',
+      status: 'Open',
+      auditor: 'Nimal Silva',
+      description: 'Stainless steel rodent mesh torn at eastern perimeter culvert.',
+      correctiveAction: 'Replace mesh panel and inspect adjacent grounds for burrows.',
+      isFalse: true
+    },
+
+    // --- MONTH PERIOD (14 - 30 days ago: Oct 18 - Nov 03, 2026) ---
+    {
+      id: 'gap-015',
+      sectionId: 'sec-1',
+      date: getDateOffset(18),
+      title: 'Intake bay illumination fixture non-functional',
+      category: 'Facility',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Kamal Perera',
+      description: 'LED floodlight #4 flickering on off-loading bay.',
+      correctiveAction: 'Replaced LED ballast and sealed IP65 enclosure.',
+      isFalse: true
+    },
+    {
+      id: 'gap-016',
+      sectionId: 'sec-3',
+      date: getDateOffset(22),
+      title: 'Scrap metal bin overflowing in Yard C',
+      category: '5S',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Nimal Silva',
+      description: 'Waste segregation bins not cleared prior to weekend.',
+      correctiveAction: 'Contractor pickup scheduled every Thursday afternoon.',
+      isFalse: true
+    },
+    {
+      id: 'gap-017',
+      sectionId: 'sec-4',
+      date: getDateOffset(16),
+      title: 'Floor sanitization log gap',
+      category: 'Hygiene',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Dr. Fernando',
+      description: 'Missing 2 PM sanitization verification initial.',
+      correctiveAction: 'Re-briefed section team on mandatory audit sign-offs.',
+      isFalse: true
+    },
+    {
+      id: 'gap-018',
+      sectionId: 'sec-5',
+      date: getDateOffset(25),
+      title: 'Steam trap leak in Wet B blending unit',
+      category: 'Equipment',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Sunil Jayawardena',
+      description: 'Thermodynamic steam trap blowing through continuously.',
+      correctiveAction: 'Replaced trap capsule with genuine Spirax Sarco spare.',
+      isFalse: true
+    },
+    {
+      id: 'gap-019',
+      sectionId: 'sec-6',
+      date: getDateOffset(20),
+      title: 'Effluent pH probe calibration expired',
+      category: 'Environment',
+      severity: 'Critical',
+      status: 'Resolved',
+      auditor: 'Dr. Fernando',
+      description: 'Online pH electrode overdue for 14-day 2-point buffer check.',
+      correctiveAction: 'Calibrated with pH 4.01 and 7.00 reference standards.',
+      isFalse: true
+    },
+    {
+      id: 'gap-020',
+      sectionId: 'sec-7',
+      date: getDateOffset(27),
+      title: 'Milk intake sampling valve sanitize interval missed',
+      category: 'Hygiene',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Dr. Fernando',
+      description: 'Aseptic sampling port alcohol spray verification overdue.',
+      correctiveAction: 'Steam sterilized port and logged swab culture test.',
+      isFalse: true
+    },
+    {
+      id: 'gap-021',
+      sectionId: 'sec-11',
+      date: getDateOffset(24),
+      title: 'Refrigerant R-134a pressure drop alarm',
+      category: 'Equipment',
+      severity: 'Critical',
+      status: 'Resolved',
+      auditor: 'Kamal Perera',
+      description: 'Condenser circuit 2 low suction pressure trip at 03:15 AM.',
+      correctiveAction: 'Pin-point ultrasonic leak test located flare nut leak; tightened and recharged.',
+      isFalse: true
+    },
+    {
+      id: 'gap-022',
+      sectionId: 'sec-13',
+      date: getDateOffset(19),
+      title: 'Food temperature log not recorded for lunch service',
+      category: 'Compliance',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Anura Bandara',
+      description: 'Bain-marie holding temperature (target > 65C) not recorded at 12:30.',
+      correctiveAction: 'Canteen supervisor reminded of regulatory food safety requirement.',
+      isFalse: true
+    },
+    {
+      id: 'gap-023',
+      sectionId: 'sec-14',
+      date: getDateOffset(29),
+      title: 'Vegetation overgrowth touching perimeter security sensor',
+      category: 'Facility',
+      severity: 'Minor',
+      status: 'Resolved',
+      auditor: 'Nimal Silva',
+      description: 'Branches triggering false perimeter beam sensor alarm.',
+      correctiveAction: 'Landscaping crew pruned 1-meter clearance around perimeter line.',
+      isFalse: true
+    },
+
+    // --- YEAR PERIOD (31 - 365 days ago) ---
+    {
+      id: 'gap-024',
+      sectionId: 'sec-1',
+      date: getDateOffset(60),
+      title: 'Pothole at Yard A main entrance gate',
+      category: 'Facility',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Kamal Perera',
+      description: 'Heavy truck axle movement caused 10cm deep asphalt depression.',
+      correctiveAction: 'Cold-mix asphalt patch laid and compacted.',
+      isFalse: true
+    },
+    {
+      id: 'gap-025',
+      sectionId: 'sec-2',
+      date: getDateOffset(120),
+      title: 'Missing wheel chocks at bay 6',
+      category: 'Safety',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Nimal Silva',
+      description: 'Safety chocks absent from designated dock hook.',
+      correctiveAction: 'Chocks attached with high-tensile steel cable to dock frame.',
+      isFalse: true
+    },
+    {
+      id: 'gap-026',
+      sectionId: 'sec-4',
+      date: getDateOffset(90),
+      title: 'Corrosion on wet line pump baseplate',
+      category: 'Equipment',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Dr. Fernando',
+      description: 'Surface oxidation underneath sanitary centrifugal pump P-201.',
+      correctiveAction: 'Cleaned, treated with rust inhibitor, and coated with epoxy paint.',
+      isFalse: true
+    },
+    {
+      id: 'gap-027',
+      sectionId: 'sec-5',
+      date: getDateOffset(150),
+      title: 'Wet B emergency eyewash inspection tag missing',
+      category: 'Safety',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Sunil Jayawardena',
+      description: 'Monthly flush and pressure check verification tag detached.',
+      correctiveAction: 'Eyewash tested for 3 min continuous flush; laminated tag attached.',
+      isFalse: true
+    },
+    {
+      id: 'gap-028',
+      sectionId: 'sec-7',
+      date: getDateOffset(85),
+      title: 'Raw milk receiving line CIP spray ball blocked',
+      category: 'Hygiene',
+      severity: 'Critical',
+      status: 'Resolved',
+      auditor: 'Dr. Fernando',
+      description: 'One quadrant nozzle of rotating spray ball partially clogged with scale.',
+      correctiveAction: 'Acid descaling performed; spray ball disassembled and inspected.',
+      isFalse: true
+    },
+    {
+      id: 'gap-029',
+      sectionId: 'sec-8',
+      date: getDateOffset(110),
+      title: 'PDDC sample weighing balance out of calibration',
+      category: 'Quality',
+      severity: 'Major',
+      status: 'Resolved',
+      auditor: 'Anura Bandara',
+      description: 'Standard 100g test weight read 99.82g on bench scale.',
+      correctiveAction: 'External calibration agency recalled scale; zero balance re-adjusted.',
+      isFalse: true
+    },
+    {
+      id: 'gap-030',
+      sectionId: 'sec-10',
+      date: getDateOffset(70),
+      title: 'FGC rapid roll door safety sensor malfunction',
+      category: 'Safety',
+      severity: 'Critical',
+      status: 'Resolved',
+      auditor: 'Kamal Perera',
+      description: 'High-speed insulated door failed to reverse when obstacle placed underneath.',
+      correctiveAction: 'Bottom safety edge sensor wiring repaired; fail-safe test verified.',
+      isFalse: true
+    },
+    {
+      id: 'gap-031',
+      sectionId: 'sec-12',
+      date: getDateOffset(140),
+      title: 'Unlabeled chemical decanting bottle in Stores',
+      category: 'Safety',
+      severity: 'Critical',
+      status: 'Resolved',
+      auditor: 'Sunil Jayawardena',
+      description: 'Secondary spray bottle found without GHS safety pictograms or contents name.',
+      correctiveAction: 'Decanted bottle disposed; standard pre-printed labeled bottles enforced.',
+      isFalse: true
+    }
+  ];
+}
+
+// Generate base total checkpoints per section to calculate percentage
+// e.g. Yard A was evaluated on 20 checklist criteria
+const SECTION_CHECKPOINT_COUNT = {
+  'sec-1': 24,  // Yard A
+  'sec-2': 18,  // Yard B
+  'sec-3': 16,  // Yard C
+  'sec-4': 28,  // Wet A
+  'sec-5': 26,  // Wet B
+  'sec-6': 22,  // Wet C
+  'sec-7': 30,  // Milk
+  'sec-8': 20,  // PDDC
+  'sec-9': 20,  // DC
+  'sec-10': 22, // FGC
+  'sec-11': 24, // CC
+  'sec-12': 18, // Stores
+  'sec-13': 16, // Canteen
+  'sec-14': 20  // Outside Environment
+};
+
+class GapDataManager {
+  constructor() {
+    this.sections = [];
+    this.gaps = [];
+    this.init();
+  }
+
+  init() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        this.sections = parsed.sections || DEFAULT_SECTIONS;
+        // Sync any updated section names and labels from DEFAULT_SECTIONS
+        if (Array.isArray(this.sections)) {
+          this.sections.forEach(s => {
+            const def = DEFAULT_SECTIONS.find(d => d.id === s.id);
+            if (def) {
+              s.name = def.name;
+              s.code = def.code;
+              s.category = def.category;
+            }
+          });
+        }
+        this.gaps = Array.isArray(parsed.gaps) ? parsed.gaps : generateSeedGaps();
+        return;
+      }
+    } catch (e) {
+      console.warn('LocalStorage error, using defaults:', e);
+    }
+    this.resetToDefaults();
+  }
+
+  resetToDefaults() {
+    this.sections = JSON.parse(JSON.stringify(DEFAULT_SECTIONS));
+    this.gaps = generateSeedGaps();
+    this.save();
+  }
+
+  clearAllData() {
+    this.gaps = [];
+    this.save();
+  }
+
+  save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        sections: this.sections,
+        gaps: this.gaps,
+        lastUpdated: new Date().toISOString()
+      }));
+      return true;
+    } catch (e) {
+      console.error('Failed to save to localStorage:', e);
+      if (e && (e.name === 'QuotaExceededError' || e.code === 22)) {
+        alert('Browser storage limit reached! Try uploading fewer or smaller images, or deleting old resolved gaps.');
+      }
+      return false;
+    }
+  }
+
+  getSections() {
+    return this.sections;
+  }
+
+  getSectionById(id) {
+    return this.sections.find(s => s.id === id);
+  }
+
+  /**
+   * Filter gaps based on the specified blueprint time period:
+   * - '2week' : last 14 days
+   * - 'month' : last 30 days
+   * - 'year'  : last 365 days / current year
+   * - 'all'   : all records
+   */
+  filterGapsByPeriod(period = '2week', customFrom = null, customTo = null) {
+    // Always use live current local date (end of today)
+    const refDate = new Date();
+    refDate.setHours(23, 59, 59, 999);
+
+    return this.gaps.filter(gap => {
+      if (period === 'all') return true;
+      if (period === 'custom' && customFrom && customTo) {
+        return gap.date >= customFrom && gap.date <= customTo;
+      }
+
+      const gapDate = new Date((gap.date || formatLocalDate(new Date())) + 'T00:00:00');
+      const diffMs = refDate - gapDate;
+      const diffDays = diffMs / (1000 * 60 * 60 * 24);
+
+      if (period === '2week') {
+        return diffDays <= 14;
+      } else if (period === 'month') {
+        return diffDays <= 30;
+      } else if (period === 'year') {
+        return diffDays <= 365;
+      }
+      return true;
+    });
+  }
+
+  /**
+   * Calculate Section-wise Summary specifically for the table and bar chart:
+   * Returns:
+   * - Section
+   * - Count of Gap (number of false items)
+   * - % (Gap Rate: Gaps / Total Checkpoints * 100)
+   * - % (Gap Share: Gaps in Section / Total Facility Gaps * 100)
+   */
+  getSectionAnalysis(period = '2week', customFrom = null, customTo = null) {
+    const periodGaps = this.filterGapsByPeriod(period, customFrom, customTo);
+    const totalGapsCount = periodGaps.length;
+
+    // Checkpoint count multipliers based on period scale
+    let periodMultiplier = 1;
+    if (period === 'month') periodMultiplier = 2; // e.g. 2 audits in a month
+    if (period === 'year') periodMultiplier = 24; // bi-weekly audits in a year
+    if (period === 'all') periodMultiplier = 30;
+
+    const summary = this.sections.map((section, idx) => {
+      const sectionGaps = periodGaps.filter(g => g.sectionId === section.id && g.isFalse !== false);
+      const countOfGap = sectionGaps.length;
+
+      const baseChecks = SECTION_CHECKPOINT_COUNT[section.id] || 20;
+      const totalChecks = baseChecks * periodMultiplier;
+
+      // Rate %: Failure frequency (Gaps / Total evaluated checkpoints)
+      const gapRatePercent = totalChecks > 0
+        ? Math.round((countOfGap / totalChecks) * 1000) / 10
+        : 0;
+
+      // Share %: Contribution to overall facility gaps
+      const gapSharePercent = totalGapsCount > 0
+        ? Math.round((countOfGap / totalGapsCount) * 1000) / 10
+        : 0;
+
+      // Status assessment
+      let statusLevel = 'good';
+      if (countOfGap >= 3 || gapRatePercent >= 15) {
+        statusLevel = 'critical';
+      } else if (countOfGap >= 1 || gapRatePercent >= 5) {
+        statusLevel = 'warning';
+      }
+
+      // Counts by severity
+      const criticalGaps = sectionGaps.filter(g => g.severity === 'Critical').length;
+      const majorGaps = sectionGaps.filter(g => g.severity === 'Major').length;
+      const minorGaps = sectionGaps.filter(g => g.severity === 'Minor').length;
+
+      // Open vs Resolved
+      const openGaps = sectionGaps.filter(g => g.status === 'Open').length;
+      const inProgressGaps = sectionGaps.filter(g => g.status === 'In Progress').length;
+      const resolvedGaps = sectionGaps.filter(g => g.status === 'Resolved').length;
+
+      return {
+        number: idx + 1,
+        id: section.id,
+        code: section.code,
+        name: section.name,
+        category: section.category,
+        countOfGap,
+        totalChecks,
+        gapRatePercent,
+        gapSharePercent,
+        statusLevel,
+        criticalGaps,
+        majorGaps,
+        minorGaps,
+        openGaps,
+        inProgressGaps,
+        resolvedGaps,
+        gaps: sectionGaps
+      };
+    });
+
+    // Facility totals
+    const totalChecksAll = summary.reduce((sum, s) => sum + s.totalChecks, 0);
+    const overallFacilityGapRate = totalChecksAll > 0
+      ? Math.round((totalGapsCount / totalChecksAll) * 1000) / 10
+      : 0;
+
+    const topSection = [...summary].sort((a, b) => b.countOfGap - a.countOfGap)[0];
+    const highestGapSection = (topSection && topSection.countOfGap > 0) ? topSection : null;
+
+    return {
+      period,
+      totalGaps: totalGapsCount,
+      totalChecks: totalChecksAll,
+      overallGapRate: overallFacilityGapRate,
+      highestGapSection,
+      sections: summary
+    };
+  }
+
+  // Add a new False / Gap record
+  addGap(gap) {
+    const newGap = {
+      id: 'gap-' + Date.now(),
+      date: gap.date || formatLocalDate(new Date()),
+      sectionId: gap.sectionId,
+      title: gap.title || 'Audit Gap Identified',
+      category: gap.category || 'Hygiene',
+      severity: gap.severity || 'Major',
+      status: gap.status || 'Open',
+      auditor: gap.auditor || 'Auditor',
+      description: gap.description || '',
+      correctiveAction: gap.correctiveAction || '',
+      images: Array.isArray(gap.images) ? gap.images : [],
+      isFalse: true
+    };
+    this.gaps.unshift(newGap);
+    this.save();
+    return newGap;
+  }
+
+  // Attach additional evidence images to an existing gap
+  addImagesToGap(gapId, newImages) {
+    const gap = this.gaps.find(g => g.id === gapId);
+    if (!gap || !Array.isArray(newImages) || newImages.length === 0) return null;
+    if (!Array.isArray(gap.images)) gap.images = [];
+    gap.images.push(...newImages);
+    this.save();
+    return gap;
+  }
+
+  // Remove a single evidence image from a gap
+  removeImageFromGap(gapId, imgId) {
+    const gap = this.gaps.find(g => g.id === gapId);
+    if (!gap || !Array.isArray(gap.images)) return null;
+    gap.images = gap.images.filter(img => img.id !== imgId);
+    this.save();
+    return gap;
+  }
+
+  // Update existing gap
+  updateGap(id, updateData) {
+    const index = this.gaps.findIndex(g => g.id === id);
+    if (index !== -1) {
+      this.gaps[index] = { ...this.gaps[index], ...updateData };
+      this.save();
+      return this.gaps[index];
+    }
+    return null;
+  }
+
+  // Delete gap
+  deleteGap(id) {
+    this.gaps = this.gaps.filter(g => g.id !== id);
+    this.save();
+  }
+
+  // Export all data to JSON
+  exportJSON() {
+    return JSON.stringify({
+      version: '1.0',
+      exportedAt: new Date().toISOString(),
+      sections: this.sections,
+      gaps: this.gaps
+    }, null, 2);
+  }
+
+  // Import JSON data
+  importJSON(jsonString) {
+    try {
+      const data = JSON.parse(jsonString);
+      if (Array.isArray(data.sections) && Array.isArray(data.gaps)) {
+        this.sections = data.sections;
+        this.gaps = data.gaps;
+        this.save();
+        return true;
+      }
+    } catch (e) {
+      console.error('Import error:', e);
+    }
+    return false;
+  }
+
+  // Export current evaluation as a true multi-sheet Excel Workbook (.xlsx)
+  // Zero-dependency OOXML (.xlsx) generator with styled sheets & Excel formulas
+  exportExcel(period = '2week') {
+    const analysis = this.getSectionAnalysis(period);
+    const periodGaps = this.filterGapsByPeriod(period);
+    const periodLabels = {
+      '2week': 'As per 2 Week (Last 14 Days)',
+      'month': 'As per Month (Last 30 Days)',
+      'year': 'As per Year (Annual 2026)',
+      'all': 'All Recorded Inspections'
+    };
+    const periodLabel = periodLabels[period] || period;
+    const generatedAt = new Date().toLocaleString();
+
+    const escXml = (val) => String(val == null ? '' : val)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
+
+    const colLetter = (idx) => {
+      let s = '';
+      let n = idx + 1;
+      while (n > 0) {
+        const m = (n - 1) % 26;
+        s = String.fromCharCode(65 + m) + s;
+        n = Math.floor((n - 1) / 26);
+      }
+      return s;
+    };
+
+    const strCell = (r, c, text, style = 3) =>
+      `<c r="${colLetter(c)}${r}" t="inlineStr" s="${style}"><is><t>${escXml(text)}</t></is></c>`;
+
+    const numCell = (r, c, val, style = 4) =>
+      `<c r="${colLetter(c)}${r}" s="${style}"><v>${Number(val) || 0}</v></c>`;
+
+    const formulaCell = (r, c, formula, cachedVal, style = 6) =>
+      `<c r="${colLetter(c)}${r}" s="${style}"><f>${escXml(formula)}</f><v>${Number(cachedVal) || 0}</v></c>`;
+
+    // --- SHEET 1: Section Summary ---
+    const s1Rows = [];
+    // Row 1: Title
+    s1Rows.push(`<row r="1" ht="28" customHeight="1">${strCell(1, 0, `RMP GAP ANALYZER - SECTION SUMMARY (${periodLabel})`, 1)}</row>`);
+    // Row 2: Subtitle
+    s1Rows.push(`<row r="2" ht="20" customHeight="1">${strCell(2, 0, `Generated: ${generatedAt}  |  Total Gaps: ${analysis.totalGaps}  |  Facility Gap Rate: ${analysis.overallGapRate}%`, 0)}</row>`);
+    // Row 4: Headers
+    const s1Headers = [
+      '#', 'Section Code', 'Section Name', 'Category',
+      'Count of Gap (False)', 'Total Checks', 'Gap Rate (%)', 'Facility Share (%)',
+      'Critical', 'Major', 'Minor', 'Open Gaps', 'Resolved', 'Status'
+    ];
+    s1Rows.push(`<row r="4" ht="24" customHeight="1">${s1Headers.map((h, i) => strCell(4, i, h, 2)).join('')}</row>`);
+
+    // Rows 5..18: 14 Sections
+    analysis.sections.forEach((s, idx) => {
+      const r = 5 + idx;
+      const statusStyle = s.statusLevel === 'critical' ? 8 : (s.statusLevel === 'warning' ? 9 : 10);
+      const cells = [
+        numCell(r, 0, s.number, 4),
+        strCell(r, 1, s.code, 3),
+        strCell(r, 2, s.name, 3),
+        strCell(r, 3, s.category, 3),
+        numCell(r, 4, s.countOfGap, 4),
+        numCell(r, 5, s.totalChecks, 4),
+        numCell(r, 6, (s.gapRatePercent / 100).toFixed(4), 5),
+        numCell(r, 7, (s.gapSharePercent / 100).toFixed(4), 5),
+        numCell(r, 8, s.criticalGaps, 4),
+        numCell(r, 9, s.majorGaps, 4),
+        numCell(r, 10, s.minorGaps, 4),
+        numCell(r, 11, s.openGaps, 4),
+        numCell(r, 12, s.resolvedGaps, 4),
+        strCell(r, 13, s.statusLevel.toUpperCase(), statusStyle)
+      ];
+      s1Rows.push(`<row r="${r}" ht="20" customHeight="1">${cells.join('')}</row>`);
+    });
+
+    // Totals Row
+    const lastSecRow = 4 + analysis.sections.length;
+    const totRow = lastSecRow + 1;
+    const totalCrit = analysis.sections.reduce((a, s) => a + s.criticalGaps, 0);
+    const totalMaj = analysis.sections.reduce((a, s) => a + s.majorGaps, 0);
+    const totalMin = analysis.sections.reduce((a, s) => a + s.minorGaps, 0);
+    const totalOpen = analysis.sections.reduce((a, s) => a + s.openGaps, 0);
+    const totalRes = analysis.sections.reduce((a, s) => a + s.resolvedGaps, 0);
+
+    const totCells = [
+      strCell(totRow, 0, '', 6),
+      strCell(totRow, 1, 'TOTAL', 6),
+      strCell(totRow, 2, `All ${analysis.sections.length} Sections`, 6),
+      strCell(totRow, 3, 'Facility Overall', 6),
+      formulaCell(totRow, 4, `SUM(E5:E${lastSecRow})`, analysis.totalGaps, 6),
+      formulaCell(totRow, 5, `SUM(F5:F${lastSecRow})`, analysis.totalChecks, 6),
+      formulaCell(totRow, 6, `IF(F${totRow}>0,E${totRow}/F${totRow},0)`, (analysis.overallGapRate / 100).toFixed(4), 7),
+      formulaCell(totRow, 7, `SUM(H5:H${lastSecRow})`, analysis.totalGaps > 0 ? 1 : 0, 7),
+      formulaCell(totRow, 8, `SUM(I5:I${lastSecRow})`, totalCrit, 6),
+      formulaCell(totRow, 9, `SUM(J5:J${lastSecRow})`, totalMaj, 6),
+      formulaCell(totRow, 10, `SUM(K5:K${lastSecRow})`, totalMin, 6),
+      formulaCell(totRow, 11, `SUM(L5:L${lastSecRow})`, totalOpen, 6),
+      formulaCell(totRow, 12, `SUM(M5:M${lastSecRow})`, totalRes, 6),
+      strCell(totRow, 13, analysis.overallGapRate >= 15 ? 'CRITICAL' : (analysis.overallGapRate >= 5 ? 'WARNING' : 'GOOD'), 6)
+    ];
+    s1Rows.push(`<row r="${totRow}" ht="22" customHeight="1">${totCells.join('')}</row>`);
+
+    const s1ColWidths = [5, 14, 22, 20, 20, 14, 15, 18, 11, 11, 11, 12, 12, 13];
+    const s1ColsXml = `<cols>${s1ColWidths.map((w, i) => `<col min="${i + 1}" max="${i + 1}" width="${w}" customWidth="1"/>`).join('')}</cols>`;
+
+    const sheet1Xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+  ${s1ColsXml}
+  <sheetData>${s1Rows.join('')}</sheetData>
+  <mergeCells count="2">
+    <mergeCell ref="A1:N1"/>
+    <mergeCell ref="A2:N2"/>
+  </mergeCells>
+</worksheet>`;
+
+    // --- SHEET 2: Gap Findings Log ---
+    const s2Rows = [];
+    s2Rows.push(`<row r="1" ht="28" customHeight="1">${strCell(1, 0, `RMP GAP ANALYZER - DETAILED FALSE / GAP FINDINGS (${periodLabel})`, 1)}</row>`);
+    const s2Headers = [
+      'Gap ID', 'Date', 'Section Code', 'Section Name', 'Defect Title',
+      'Category', 'Severity', 'Status', 'Auditor', 'Description', 'Corrective Action'
+    ];
+    s2Rows.push(`<row r="3" ht="24" customHeight="1">${s2Headers.map((h, i) => strCell(3, i, h, 2)).join('')}</row>`);
+
+    periodGaps.forEach((g, idx) => {
+      const r = 4 + idx;
+      const sec = this.getSectionById(g.sectionId);
+      const sevStyle = g.severity === 'Critical' ? 8 : (g.severity === 'Major' ? 9 : 3);
+      const statStyle = g.status === 'Resolved' ? 10 : (g.status === 'Open' ? 8 : 9);
+      const cells = [
+        strCell(r, 0, g.id, 3),
+        strCell(r, 1, g.date, 3),
+        strCell(r, 2, sec ? sec.code : '-', 3),
+        strCell(r, 3, sec ? sec.name : '-', 3),
+        strCell(r, 4, g.title, 3),
+        strCell(r, 5, g.category, 3),
+        strCell(r, 6, g.severity, sevStyle),
+        strCell(r, 7, g.status, statStyle),
+        strCell(r, 8, g.auditor, 3),
+        strCell(r, 9, g.description, 3),
+        strCell(r, 10, g.correctiveAction, 3)
+      ];
+      s2Rows.push(`<row r="${r}" ht="20" customHeight="1">${cells.join('')}</row>`);
+    });
+
+    const s2ColWidths = [14, 13, 14, 20, 32, 16, 12, 14, 18, 42, 42];
+    const s2ColsXml = `<cols>${s2ColWidths.map((w, i) => `<col min="${i + 1}" max="${i + 1}" width="${w}" customWidth="1"/>`).join('')}</cols>`;
+
+    const sheet2Xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+  ${s2ColsXml}
+  <sheetData>${s2Rows.join('')}</sheetData>
+  <mergeCells count="1">
+    <mergeCell ref="A1:K1"/>
+  </mergeCells>
+</worksheet>`;
+
+    // --- OOXML Stylesheet ---
+    const stylesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+  <fonts count="7">
+    <font><sz val="11"/><color rgb="FF0F172A"/><name val="Calibri"/></font>
+    <font><b/><sz val="13"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>
+    <font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>
+    <font><b/><sz val="11"/><color rgb="FF0F172A"/><name val="Calibri"/></font>
+    <font><b/><sz val="10"/><color rgb="FF991B1B"/><name val="Calibri"/></font>
+    <font><b/><sz val="10"/><color rgb="FF92400E"/><name val="Calibri"/></font>
+    <font><b/><sz val="10"/><color rgb="FF065F46"/><name val="Calibri"/></font>
+  </fonts>
+  <fills count="8">
+    <fill><patternFill patternType="none"/></fill>
+    <fill><patternFill patternType="gray125"/></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FF0F172A"/></patternFill></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FF1E40AF"/></patternFill></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FFE2E8F0"/></patternFill></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FFFEE2E2"/></patternFill></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FFFEF3C7"/></patternFill></fill>
+    <fill><patternFill patternType="solid"><fgColor rgb="FFD1FAE5"/></patternFill></fill>
+  </fills>
+  <borders count="3">
+    <border><left/><right/><top/><bottom/><diagonal/></border>
+    <border>
+      <left style="thin"><color rgb="FFCBD5E1"/></left>
+      <right style="thin"><color rgb="FFCBD5E1"/></right>
+      <top style="thin"><color rgb="FFCBD5E1"/></top>
+      <bottom style="thin"><color rgb="FFCBD5E1"/></bottom>
+      <diagonal/>
+    </border>
+    <border>
+      <left style="thin"><color rgb="FF94A3B8"/></left>
+      <right style="thin"><color rgb="FF94A3B8"/></right>
+      <top style="medium"><color rgb="FF334155"/></top>
+      <bottom style="double"><color rgb="FF334155"/></bottom>
+      <diagonal/>
+    </border>
+  </borders>
+  <cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
+  <cellXfs count="11">
+    <xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
+    <xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment vertical="center" horizontal="left"/></xf>
+    <xf numFmtId="0" fontId="2" fillId="3" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>
+    <xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="10" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="0" fontId="3" fillId="4" borderId="2" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="10" fontId="3" fillId="4" borderId="2" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="0" fontId="4" fillId="5" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="0" fontId="5" fillId="6" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+    <xf numFmtId="0" fontId="6" fillId="7" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" horizontal="center"/></xf>
+  </cellXfs>
+</styleSheet>`;
+
+    const contentTypesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+  <Default Extension="xml" ContentType="application/xml"/>
+  <Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>
+  <Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>
+  <Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>
+  <Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>
+</Types>`;
+
+    const rootRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>
+</Relationships>`;
+
+    const workbookXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <sheets>
+    <sheet name="Section Summary" sheetId="1" r:id="rId1"/>
+    <sheet name="Gap Findings Log" sheetId="2" r:id="rId2"/>
+  </sheets>
+</workbook>`;
+
+    const workbookRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>
+  <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/>
+  <Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
+</Relationships>`;
+
+    // Pack into valid uncompressed ZIP (.xlsx)
+    const files = [
+      { name: '[Content_Types].xml', content: contentTypesXml },
+      { name: '_rels/.rels', content: rootRelsXml },
+      { name: 'xl/workbook.xml', content: workbookXml },
+      { name: 'xl/_rels/workbook.xml.rels', content: workbookRelsXml },
+      { name: 'xl/styles.xml', content: stylesXml },
+      { name: 'xl/worksheets/sheet1.xml', content: sheet1Xml },
+      { name: 'xl/worksheets/sheet2.xml', content: sheet2Xml }
+    ];
+
+    return this._createZipBytes(files);
+  }
+
+  // Minimal zero-dependency ZIP archive builder (Store method 0 + CRC32)
+  _createZipBytes(files) {
+    const encoder = new TextEncoder();
+
+    // Build CRC32 lookup table
+    const crcTable = new Uint32Array(256);
+    for (let i = 0; i < 256; i++) {
+      let c = i;
+      for (let k = 0; k < 8; k++) {
+        c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      }
+      crcTable[i] = c >>> 0;
+    }
+
+    const calcCrc32 = (bytes) => {
+      let crc = 0xFFFFFFFF;
+      for (let i = 0; i < bytes.length; i++) {
+        crc = crcTable[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+      }
+      return (crc ^ 0xFFFFFFFF) >>> 0;
+    };
+
+    const localParts = [];
+    const centralParts = [];
+    let offset = 0;
+
+    files.forEach(file => {
+      const nameBytes = encoder.encode(file.name);
+      const dataBytes = encoder.encode(file.content);
+      const crc = calcCrc32(dataBytes);
+      const size = dataBytes.length;
+
+      // Local file header (30 bytes + filename)
+      const localHeader = new Uint8Array(30 + nameBytes.length);
+      const lv = new DataView(localHeader.buffer);
+      lv.setUint32(0, 0x04034b50, true); // signature
+      lv.setUint16(4, 20, true);         // version needed
+      lv.setUint16(6, 0, true);          // flags
+      lv.setUint16(8, 0, true);          // compression (0 = store)
+      lv.setUint16(10, 0, true);         // mod time
+      lv.setUint16(12, 0, true);         // mod date
+      lv.setUint32(14, crc, true);       // crc32
+      lv.setUint32(18, size, true);      // compressed size
+      lv.setUint32(22, size, true);      // uncompressed size
+      lv.setUint16(26, nameBytes.length, true); // filename len
+      lv.setUint16(28, 0, true);         // extra field len
+      localHeader.set(nameBytes, 30);
+
+      localParts.push(localHeader, dataBytes);
+
+      // Central directory header (46 bytes + filename)
+      const centralHeader = new Uint8Array(46 + nameBytes.length);
+      const cv = new DataView(centralHeader.buffer);
+      cv.setUint32(0, 0x02014b50, true); // signature
+      cv.setUint16(4, 20, true);         // version made by
+      cv.setUint16(6, 20, true);         // version needed
+      cv.setUint16(8, 0, true);          // flags
+      cv.setUint16(10, 0, true);         // compression
+      cv.setUint16(12, 0, true);         // mod time
+      cv.setUint16(14, 0, true);         // mod date
+      cv.setUint32(16, crc, true);       // crc32
+      cv.setUint32(20, size, true);      // compressed size
+      cv.setUint32(24, size, true);      // uncompressed size
+      cv.setUint16(28, nameBytes.length, true); // filename len
+      cv.setUint16(30, 0, true);         // extra len
+      cv.setUint16(32, 0, true);         // comment len
+      cv.setUint16(34, 0, true);         // disk start
+      cv.setUint16(36, 0, true);         // internal attr
+      cv.setUint32(38, 0, true);         // external attr
+      cv.setUint32(42, offset, true);    // local header offset
+      centralHeader.set(nameBytes, 46);
+
+      centralParts.push(centralHeader);
+      offset += localHeader.length + dataBytes.length;
+    });
+
+    const centralSize = centralParts.reduce((acc, p) => acc + p.length, 0);
+
+    // End of central directory record (22 bytes)
+    const eocd = new Uint8Array(22);
+    const ev = new DataView(eocd.buffer);
+    ev.setUint32(0, 0x06054b50, true);       // signature
+    ev.setUint16(4, 0, true);                // disk number
+    ev.setUint16(6, 0, true);                // central dir start disk
+    ev.setUint16(8, files.length, true);     // entries on disk
+    ev.setUint16(10, files.length, true);    // total entries
+    ev.setUint32(12, centralSize, true);     // central dir size
+    ev.setUint32(16, offset, true);          // central dir offset
+    ev.setUint16(20, 0, true);               // comment len
+
+    // Concatenate all byte arrays
+    const totalLength = offset + centralSize + eocd.length;
+    const result = new Uint8Array(totalLength);
+    let pos = 0;
+    for (const part of localParts) {
+      result.set(part, pos);
+      pos += part.length;
+    }
+    for (const part of centralParts) {
+      result.set(part, pos);
+      pos += part.length;
+    }
+    result.set(eocd, pos);
+
+    return result;
+  }
+}
+
+// Global data store instance
+window.gapDataStore = new GapDataManager();
+
+  </script>
+  <script>
+// RMP Gap Analyzer - Custom Canvas Charting Engine
+// Zero-dependency, high-DPI crisp rendering tailored to plant gap analysis blueprint
+
+class GapChartEngine {
+  constructor(canvasId) {
+    this.canvas = document.getElementById(canvasId);
+    if (!this.canvas) return;
+    this.ctx = this.canvas.getContext('2d');
+    this.data = null;
+    this.metricMode = 'percent'; // 'percent' (default per blueprint) or 'count'
+    this.chartType = 'bar'; // 'bar' or 'pareto'
+    this.hoverIndex = -1;
+    this.bars = [];
+    this.animationProgress = 1;
+    this.animationFrame = null;
+
+    this.initEvents();
+  }
+
+  initEvents() {
+    this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+    this.canvas.addEventListener('mouseleave', () => this.handleMouseLeave());
+    this.canvas.addEventListener('click', (e) => this.handleClick(e));
+
+    window.addEventListener('resize', () => {
+      this.resize();
+      this.render();
+    });
+  }
+
+  resize() {
+    if (!this.canvas) return;
+    const rect = this.canvas.parentElement.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    
+    // Set display size
+    const displayWidth = rect.width || 800;
+    const displayHeight = Math.max(380, Math.min(520, window.innerHeight * 0.45));
+    
+    this.canvas.style.width = displayWidth + 'px';
+    this.canvas.style.height = displayHeight + 'px';
+
+    // Set actual canvas buffer size
+    this.canvas.width = displayWidth * dpr;
+    this.canvas.height = displayHeight * dpr;
+
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.width = displayWidth;
+    this.height = displayHeight;
+  }
+
+  setData(analysisData, metricMode = 'percent', chartType = 'bar') {
+    this.data = analysisData;
+    this.metricMode = metricMode;
+    this.chartType = chartType;
+    this.resize();
+    this.animate();
+  }
+
+  animate() {
+    if (this.animationFrame) cancelAnimationFrame(this.animationFrame);
+    let start = null;
+    const duration = 400; // ms
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      // Ease out cubic
+      this.animationProgress = 1 - Math.pow(1 - progress, 3);
+      this.render();
+
+      if (progress < 1) {
+        this.animationFrame = requestAnimationFrame(step);
+      }
+    };
+    this.animationFrame = requestAnimationFrame(step);
+  }
+
+  render() {
+    if (!this.canvas || !this.data || !this.data.sections) return;
+    const ctx = this.ctx;
+    const w = this.width;
+    const h = this.height;
+
+    // Clear background
+    ctx.clearRect(0, 0, w, h);
+
+    let sections = [...this.data.sections];
+    if (sections.length === 0) {
+      this.bars = [];
+      ctx.save();
+      ctx.fillStyle = '#64748b';
+      ctx.font = '600 14px system-ui, -apple-system, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('No sections selected. Pick one or more sections in the filter above.', w / 2, h / 2);
+      ctx.restore();
+      return;
+    }
+
+    if (this.chartType === 'pareto') {
+      sections.sort((a, b) => {
+        const valA = this.metricMode === 'percent' ? a.gapRatePercent : a.countOfGap;
+        const valB = this.metricMode === 'percent' ? b.gapRatePercent : b.countOfGap;
+        return valB - valA;
+      });
+    }
+
+    // Chart margins
+    const margin = {
+      top: 48,
+      right: this.chartType === 'pareto' ? 60 : 30,
+      bottom: 75,
+      left: 65
+    };
+
+    const chartWidth = w - margin.left - margin.right;
+    const chartHeight = h - margin.top - margin.bottom;
+
+    if (chartWidth <= 0 || chartHeight <= 0) return;
+
+    // Determine max scale
+    let maxVal = 0;
+    sections.forEach(s => {
+      const val = this.metricMode === 'percent' ? s.gapRatePercent : s.countOfGap;
+      if (val > maxVal) maxVal = val;
+    });
+
+    if (this.metricMode === 'percent') {
+      maxVal = Math.max(maxVal * 1.25, 20); // At least 20% scale ceiling
+      maxVal = Math.ceil(maxVal / 5) * 5;  // Round up to multiple of 5
+    } else {
+      maxVal = Math.max(maxVal * 1.25, 6);
+      maxVal = Math.ceil(maxVal / 2) * 2;
+    }
+
+    // Draw grid lines & Y-axis labels
+    const gridLines = 5;
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = 1;
+    ctx.fillStyle = '#64748b';
+    ctx.font = '500 11px system-ui, -apple-system, sans-serif';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+
+    for (let i = 0; i <= gridLines; i++) {
+      const ratio = i / gridLines;
+      const y = margin.top + chartHeight * (1 - ratio);
+      const val = Math.round(ratio * maxVal * 10) / 10;
+      const label = this.metricMode === 'percent' ? `${val}%` : `${val}`;
+
+      // Line
+      ctx.beginPath();
+      ctx.moveTo(margin.left, y);
+      ctx.lineTo(w - margin.right, y);
+      ctx.stroke();
+
+      // Label
+      ctx.fillText(label, margin.left - 10, y);
+    }
+
+    // Y-Axis Title
+    ctx.save();
+    ctx.translate(18, margin.top + chartHeight / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#334155';
+    ctx.font = '600 12px system-ui, -apple-system, sans-serif';
+    ctx.fillText(this.metricMode === 'percent' ? '% Gap Rate (False / Checkpoints)' : 'Count of Gaps (False Count)', 0, 0);
+    ctx.restore();
+
+    // Threshold / Benchmark reference line (5% standard threshold)
+    if (this.metricMode === 'percent' && maxVal >= 5) {
+      const targetY = margin.top + chartHeight * (1 - (5 / maxVal));
+      ctx.save();
+      ctx.setLineDash([5, 4]);
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(margin.left, targetY);
+      ctx.lineTo(w - margin.right, targetY);
+      ctx.stroke();
+
+      // Badge
+      ctx.fillStyle = '#10b981';
+      ctx.font = 'bold 10px system-ui, -apple-system, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText('Target Max: 5.0%', margin.left + 8, targetY - 6);
+      ctx.restore();
+    }
+
+    // Draw Bars
+    const totalBars = sections.length;
+    const slotWidth = chartWidth / totalBars;
+    const maxBarW = totalBars <= 5 ? 64 : 38;
+    const barWidth = Math.max(12, Math.min(maxBarW, slotWidth * 0.62));
+    this.bars = [];
+
+    // Pareto cumulative tracker
+    let cumulativeSum = 0;
+    const totalGapsMetric = sections.reduce((acc, s) => {
+      return acc + (this.metricMode === 'percent' ? s.gapRatePercent : s.countOfGap);
+    }, 0);
+    const paretoPoints = [];
+
+    sections.forEach((s, idx) => {
+      const val = this.metricMode === 'percent' ? s.gapRatePercent : s.countOfGap;
+      const barHeight = (val / maxVal) * chartHeight * this.animationProgress;
+      const xCenter = margin.left + idx * slotWidth + slotWidth / 2;
+      const x = xCenter - barWidth / 2;
+      const y = margin.top + chartHeight - barHeight;
+
+      this.bars.push({
+        x,
+        y,
+        width: barWidth,
+        height: barHeight,
+        xCenter,
+        section: s,
+        value: val,
+        index: idx
+      });
+
+      // Bar Colors based on gap rate
+      let fillColorStart = '#3b82f6';
+      let fillColorEnd = '#1d4ed8';
+
+      if (this.metricMode === 'percent') {
+        if (s.gapRatePercent >= 15) {
+          fillColorStart = '#f87171'; // Critical red
+          fillColorEnd = '#dc2626';
+        } else if (s.gapRatePercent >= 5) {
+          fillColorStart = '#fbbf24'; // Warning amber
+          fillColorEnd = '#d97706';
+        } else {
+          fillColorStart = '#34d399'; // Good emerald
+          fillColorEnd = '#059669';
+        }
+      } else {
+        if (s.countOfGap >= 3) {
+          fillColorStart = '#f87171';
+          fillColorEnd = '#dc2626';
+        } else if (s.countOfGap >= 1) {
+          fillColorStart = '#60a5fa';
+          fillColorEnd = '#2563eb';
+        } else {
+          fillColorStart = '#94a3b8';
+          fillColorEnd = '#64748b';
+        }
+      }
+
+      // Highlight on hover
+      const isHovered = this.hoverIndex === idx;
+      if (isHovered) {
+        ctx.save();
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.08)';
+        ctx.fillRect(xCenter - slotWidth / 2, margin.top, slotWidth, chartHeight);
+        ctx.restore();
+      }
+
+      // Draw Bar with rounded top
+      ctx.save();
+      const grad = ctx.createLinearGradient(0, y, 0, y + barHeight);
+      grad.addColorStop(0, fillColorStart);
+      grad.addColorStop(1, fillColorEnd);
+      ctx.fillStyle = isHovered ? '#1e40af' : grad;
+
+      if (barHeight > 4) {
+        const radius = Math.min(4, barWidth / 2);
+        ctx.beginPath();
+        ctx.moveTo(x, y + barHeight);
+        ctx.lineTo(x, y + radius);
+        ctx.quadraticCurveTo(x, y, x + radius, y);
+        ctx.lineTo(x + barWidth - radius, y);
+        ctx.quadraticCurveTo(x + barWidth, y, x + barWidth, y + radius);
+        ctx.lineTo(x + barWidth, y + barHeight);
+        ctx.closePath();
+        ctx.fill();
+      } else if (barHeight > 0) {
+        ctx.fillRect(x, y, barWidth, barHeight);
+      }
+      ctx.restore();
+
+      // Top Value Label
+      if (val > 0 && this.animationProgress > 0.6) {
+        ctx.save();
+        ctx.font = 'bold 11px system-ui, -apple-system, sans-serif';
+        ctx.fillStyle = isHovered ? '#0f172a' : '#475569';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        const displayVal = this.metricMode === 'percent' ? `${val}%` : `${val}`;
+        ctx.fillText(displayVal, xCenter, y - 4);
+        ctx.restore();
+      }
+
+      // X-Axis Section Name Label
+      ctx.save();
+      ctx.translate(xCenter, margin.top + chartHeight + 12);
+      ctx.rotate(-Math.PI / 4.2); // Angled 42 degrees for readability
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = isHovered ? '#1e293b' : '#334155';
+      ctx.font = isHovered 
+        ? 'bold 11px system-ui, -apple-system, sans-serif'
+        : '500 11px system-ui, -apple-system, sans-serif';
+      ctx.fillText(s.name, 0, 0);
+      ctx.restore();
+
+      // Track Pareto points if active
+      if (this.chartType === 'pareto' && totalGapsMetric > 0) {
+        cumulativeSum += val;
+        const cumPercent = (cumulativeSum / totalGapsMetric) * 100;
+        const paretoY = margin.top + chartHeight * (1 - (cumPercent / 100));
+        paretoPoints.push({ x: xCenter, y: paretoY, cumPercent });
+      }
+    });
+
+    // Draw Pareto Line if in Pareto mode
+    if (this.chartType === 'pareto' && paretoPoints.length > 0) {
+      ctx.save();
+      ctx.strokeStyle = '#8b5cf6';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      paretoPoints.forEach((pt, i) => {
+        if (i === 0) ctx.moveTo(pt.x, pt.y);
+        else ctx.lineTo(pt.x, pt.y);
+      });
+      ctx.stroke();
+
+      // Dots
+      paretoPoints.forEach(pt => {
+        ctx.fillStyle = '#ffffff';
+        ctx.strokeStyle = '#8b5cf6';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 4, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      });
+
+      // Right Y-axis for Pareto %
+      ctx.fillStyle = '#8b5cf6';
+      ctx.font = '500 10px system-ui, -apple-system, sans-serif';
+      ctx.textAlign = 'left';
+      [0, 20, 40, 60, 80, 100].forEach(p => {
+        const py = margin.top + chartHeight * (1 - p / 100);
+        ctx.fillText(`${p}%`, w - margin.right + 8, py);
+      });
+      ctx.restore();
+    }
+
+    // X-Axis Baseline
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(margin.left, margin.top + chartHeight);
+    ctx.lineTo(w - margin.right, margin.top + chartHeight);
+    ctx.stroke();
+
+    // Chart bottom axis title (Sections)
+    ctx.save();
+    ctx.font = '600 12px system-ui, -apple-system, sans-serif';
+    ctx.fillStyle = '#475569';
+    ctx.textAlign = 'center';
+    const xTitle = sections.length === 1
+      ? `Section: ${sections[0].name} (${sections[0].code})`
+      : `Sections (${sections.length} Plant Areas)`;
+    ctx.fillText(xTitle, margin.left + chartWidth / 2, h - 8);
+    ctx.restore();
+
+    // Render tooltip if hovered
+    if (this.hoverIndex !== -1 && this.bars[this.hoverIndex]) {
+      this.renderTooltip(this.bars[this.hoverIndex]);
+    }
+  }
+
+  renderTooltip(bar) {
+    const ctx = this.ctx;
+    const s = bar.section;
+
+    const lines = [
+      { text: `${s.name} (${s.code})`, bold: true, color: '#0f172a' },
+      { text: `Category: ${s.category}`, color: '#64748b' },
+      { text: `Count of Gaps: ${s.countOfGap} (False)`, color: '#b91c1c', bold: true },
+      { text: `Gap Rate: ${s.gapRatePercent}% (Checks: ${s.totalChecks})`, color: '#1e293b' },
+      { text: `Share of Plant Gaps: ${s.gapSharePercent}%`, color: '#475569' },
+      { text: `Status: ${s.openGaps} Open, ${s.resolvedGaps} Resolved`, color: '#0284c7' }
+    ];
+
+    ctx.save();
+    ctx.font = '11px system-ui, -apple-system, sans-serif';
+    let maxTextWidth = 0;
+    lines.forEach(l => {
+      const tw = ctx.measureText(l.text).width;
+      if (tw > maxTextWidth) maxTextWidth = tw;
+    });
+
+    const boxWidth = maxTextWidth + 24;
+    const boxHeight = lines.length * 17 + 16;
+    let boxX = bar.xCenter - boxWidth / 2;
+    let boxY = bar.y - boxHeight - 12;
+
+    // Bounds checking
+    if (boxX < 10) boxX = 10;
+    if (boxX + boxWidth > this.width - 10) boxX = this.width - boxWidth - 10;
+    if (boxY < 10) boxY = bar.y + bar.height + 14;
+
+    // Tooltip Card background with shadow
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.15)';
+    ctx.shadowBlur = 12;
+    ctx.shadowOffsetY = 4;
+    ctx.fillStyle = '#ffffff';
+    ctx.strokeStyle = '#cbd5e1';
+    ctx.lineWidth = 1;
+
+    // Rounded rectangle
+    const r = 6;
+    ctx.beginPath();
+    ctx.moveTo(boxX + r, boxY);
+    ctx.lineTo(boxX + boxWidth - r, boxY);
+    ctx.quadraticCurveTo(boxX + boxWidth, boxY, boxX + boxWidth, boxY + r);
+    ctx.lineTo(boxX + boxWidth, boxY + boxHeight - r);
+    ctx.quadraticCurveTo(boxX + boxWidth, boxY + boxHeight, boxX + boxWidth - r, boxY + boxHeight);
+    ctx.lineTo(boxX + r, boxY + boxHeight);
+    ctx.quadraticCurveTo(boxX, boxY + boxHeight, boxX, boxY + boxHeight - r);
+    ctx.lineTo(boxX, boxY + r);
+    ctx.quadraticCurveTo(boxX, boxY, boxX + r, boxY);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.shadowColor = 'transparent';
+
+    // Tooltip text
+    lines.forEach((l, i) => {
+      ctx.font = l.bold ? 'bold 11px system-ui, -apple-system, sans-serif' : '11px system-ui, -apple-system, sans-serif';
+      ctx.fillStyle = l.color;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      ctx.fillText(l.text, boxX + 12, boxY + 10 + i * 17);
+    });
+
+    ctx.restore();
+  }
+
+  handleMouseMove(e) {
+    const rect = this.canvas.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    let foundIdx = -1;
+    for (let i = 0; i < this.bars.length; i++) {
+      const b = this.bars[i];
+      // Expand hit test vertically
+      if (mouseX >= b.x - 4 && mouseX <= b.x + b.width + 4 && mouseY >= 30 && mouseY <= this.height - 50) {
+        foundIdx = i;
+        break;
+      }
+    }
+
+    if (foundIdx !== this.hoverIndex) {
+      this.hoverIndex = foundIdx;
+      this.canvas.style.cursor = foundIdx !== -1 ? 'pointer' : 'default';
+      this.render();
+    }
+  }
+
+  handleMouseLeave() {
+    if (this.hoverIndex !== -1) {
+      this.hoverIndex = -1;
+      this.canvas.style.cursor = 'default';
+      this.render();
+    }
+  }
+
+  handleClick(e) {
+    if (this.hoverIndex !== -1 && this.bars[this.hoverIndex]) {
+      const sec = this.bars[this.hoverIndex].section;
+      if (typeof window.onSelectSectionFromChart === 'function') {
+        window.onSelectSectionFromChart(sec);
+      }
+    }
+  }
+
+  exportImage() {
+    if (!this.canvas) return;
+    const link = document.createElement('a');
+    link.download = `rmp-gap-analysis-chart-${Date.now()}.png`;
+    link.href = this.canvas.toDataURL('image/png');
+    link.click();
+  }
+}
+
+window.GapChartEngine = GapChartEngine;
+
+  </script>
+  <script>
+// RMP Gap Analyzer - Main Application Controller
+// Orchestrates views, state, chart updates, and audit workflows
+
+class GapApp {
+  constructor() {
+    this.currentView = 'table'; // 'table' (Page 1), 'chart' (Page 2), 'registry' (Page 3), 'section-detail' (Full Page)
+    this.previousView = 'table';
+    this.currentPeriod = '2week'; // blueprint default: '2week', 'month', 'year', 'all'
+    this.chartMetric = 'percent'; // 'percent' (blueprint % axis) or 'count'
+    this.chartType = 'bar'; // 'bar' or 'pareto'
+    this.activeSectionId = null;
+    this.chartEngine = null;
+    this.pendingImages = [];
+    this.pendingAttachGapId = null;
+    this.lightboxState = { gapId: null, index: 0 };
+    this.selectedChartSectionIds = new Set();
+
+    this.init();
+  }
+
+  init() {
+    this.selectedChartSectionIds = new Set(window.gapDataStore.getSections().map(s => s.id));
+    this.initChart();
+    this.bindEvents();
+    this.populateSectionDropdowns();
+    this.render();
+  }
+
+  initChart() {
+    this.chartEngine = new GapChartEngine('gapBarChart');
+  }
+
+  bindEvents() {
+    // Navigation Tabs
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        const view = tab.getAttribute('data-view');
+        this.switchView(view);
+      });
+    });
+
+    // Time Period Buttons (As per 2 week, month, year)
+    document.querySelectorAll('.period-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this.currentPeriod = btn.getAttribute('data-period');
+        this.render();
+        this.showToast(`Switched time period: ${btn.innerText.trim()}`);
+      });
+    });
+
+    // Chart Metric Toggles (% vs Count)
+    document.querySelectorAll('.chart-metric-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.chart-metric-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this.chartMetric = btn.getAttribute('data-metric');
+        this.renderChart();
+      });
+    });
+
+    // Chart Type (Standard Bar vs Pareto)
+    const paretoToggle = document.getElementById('togglePareto');
+    if (paretoToggle) {
+      paretoToggle.addEventListener('click', () => {
+        this.chartType = this.chartType === 'bar' ? 'pareto' : 'bar';
+        paretoToggle.classList.toggle('active', this.chartType === 'pareto');
+        paretoToggle.innerText = this.chartType === 'pareto' ? '📊 Standard View' : '📈 Pareto 80/20 View';
+        this.renderChart();
+      });
+    }
+
+    // Chart Export Button
+    const exportChartBtn = document.getElementById('exportChartBtn');
+    if (exportChartBtn) {
+      exportChartBtn.addEventListener('click', () => {
+        if (this.chartEngine) this.chartEngine.exportImage();
+      });
+    }
+
+    // New Gap Modal Controls
+    const openAddGapBtn = document.getElementById('openAddGapBtn');
+    if (openAddGapBtn) {
+      openAddGapBtn.addEventListener('click', () => this.openAddGapModal());
+    }
+
+    const gapForm = document.getElementById('newGapForm');
+    if (gapForm) {
+      gapForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        this.handleSaveNewGap();
+      });
+    }
+
+    // Excel Sheet Export (.xlsx)
+    const exportExcelBtn = document.getElementById('exportExcelBtn');
+    if (exportExcelBtn) {
+      exportExcelBtn.addEventListener('click', () => this.downloadExcel());
+    }
+
+    // Clear All Data
+    const clearDataBtn = document.getElementById('clearDataBtn');
+    if (clearDataBtn) {
+      clearDataBtn.addEventListener('click', () => {
+        if (confirm('Clear ALL recorded false/gap data across all 14 sections? This cannot be undone.')) {
+          window.gapDataStore.clearAllData();
+          this.render();
+          this.showToast('All gap data cleared! Ready for fresh records.');
+        }
+      });
+    }
+
+    // Image Upload in Log New Gap Modal
+    const gapImageInput = document.getElementById('gapImageInput');
+    if (gapImageInput) {
+      gapImageInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          this.handleImageFilesSelected(e.target.files, 'modal');
+          e.target.value = '';
+        }
+      });
+    }
+
+    const dropZone = document.getElementById('gapImageDropZone');
+    if (dropZone) {
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('drag-over');
+      });
+      dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('drag-over');
+      });
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('drag-over');
+        if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+          this.handleImageFilesSelected(e.dataTransfer.files, 'modal');
+        }
+      });
+    }
+
+    // Attach Photos to Existing False Finding
+    const existingPhotoInput = document.getElementById('existingGapPhotoInput');
+    if (existingPhotoInput) {
+      existingPhotoInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0 && this.pendingAttachGapId) {
+          this.handleImageFilesSelected(e.target.files, 'existing', this.pendingAttachGapId);
+          e.target.value = '';
+        }
+      });
+    }
+
+    // Lightbox Keyboard Controls
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('imageLightboxModal');
+      if (!lb || !lb.classList.contains('active')) return;
+      if (e.key === 'Escape') this.closeLightbox();
+      else if (e.key === 'ArrowLeft') this.navigateLightbox(-1);
+      else if (e.key === 'ArrowRight') this.navigateLightbox(1);
+    });
+
+    // Hook for clicking bar in chart
+    window.onSelectSectionFromChart = (sec) => {
+      this.openSectionDetailsModal(sec.id);
+    };
+  }
+
+  switchView(viewName) {
+    if (viewName === 'section-detail' && this.currentView !== 'section-detail') {
+      this.previousView = this.currentView;
+    }
+    this.currentView = viewName;
+    document.querySelectorAll('.nav-tab').forEach(t => {
+      t.classList.toggle('active', t.getAttribute('data-view') === viewName);
+    });
+    document.querySelectorAll('.view-panel').forEach(p => {
+      p.classList.toggle('active', p.id === `view-${viewName}`);
+    });
+
+    // Hide global KPI cards when viewing dedicated full-page section details
+    const globalKpi = document.getElementById('globalKpiGrid');
+    if (globalKpi) {
+      globalKpi.style.display = viewName === 'section-detail' ? 'none' : '';
+    }
+
+    if (viewName === 'chart') {
+      setTimeout(() => {
+        if (this.chartEngine) {
+          this.chartEngine.resize();
+          this.renderChart();
+        }
+      }, 50);
+    } else if (viewName === 'registry') {
+      this.renderRegistry();
+    } else if (viewName === 'section-detail') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  populateSectionDropdowns() {
+    const sections = window.gapDataStore.getSections();
+    const dropdowns = ['gapSectionSelect', 'registryFilterSection', 'secPageSwitcher'];
+
+    dropdowns.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const currentVal = el.value;
+      let html = id === 'registryFilterSection' ? '<option value="all">All Sections (14)</option>' : '';
+      
+      sections.forEach(s => {
+        html += `<option value="${s.id}">${s.code} - ${s.name} (${s.category})</option>`;
+      });
+      el.innerHTML = html;
+      if (currentVal) el.value = currentVal;
+    });
+
+    // Populate Chart Section Filter Dropdown (All, With Gaps, Categories, Single Section)
+    const chartDropdown = document.getElementById('chartSectionDropdown');
+    if (chartDropdown) {
+      const categories = [...new Set(sections.map(s => s.category))];
+      let html = `<option value="all">All Sections (${sections.length})</option>`;
+      html += `<option value="with-gaps">Only Sections with Gaps (&gt; 0)</option>`;
+      html += `<option value="custom" disabled>Custom Selection</option>`;
+      html += `<optgroup label="Filter by Category">`;
+      categories.forEach(cat => {
+        html += `<option value="cat:${cat}">${cat}</option>`;
+      });
+      html += `</optgroup>`;
+      html += `<optgroup label="Filter by Single Section">`;
+      sections.forEach(s => {
+        html += `<option value="sec:${s.id}">${s.code} - ${s.name}</option>`;
+      });
+      html += `</optgroup>`;
+      chartDropdown.innerHTML = html;
+      chartDropdown.value = 'all';
+    }
+  }
+
+  render() {
+    const analysis = window.gapDataStore.getSectionAnalysis(this.currentPeriod);
+
+    this.updatePeriodDisplay();
+    this.renderKPIs(analysis);
+    this.renderTable(analysis);
+    this.renderChart(analysis);
+    this.renderLeaderboard(analysis);
+    if (this.currentView === 'section-detail' && this.activeSectionId) {
+      this.renderSectionDetailsPage(analysis);
+    }
+    if (this.currentView === 'registry') {
+      this.renderRegistry();
+    }
+  }
+
+  updatePeriodDisplay() {
+    const labels = {
+      '2week': 'Showing Last 14 Days (Bi-weekly evaluation as per blueprint)',
+      'month': 'Showing Last 30 Days (Monthly evaluation as per blueprint)',
+      'year': 'Showing Current Year 2026 (Annual evaluation as per blueprint)',
+      'all': 'Showing All Recorded Inspection Data'
+    };
+    const el = document.getElementById('periodDateDisplay');
+    if (el) {
+      el.innerHTML = `<span>📅</span> ${labels[this.currentPeriod] || ''}`;
+    }
+
+    const chartTitlePeriod = document.getElementById('chartTitlePeriod');
+    if (chartTitlePeriod) {
+      const periodShort = {
+        '2week': 'As per 2 week',
+        'month': 'As per month',
+        'year': 'As per year',
+        'all': 'All Time'
+      };
+      chartTitlePeriod.innerText = `(${periodShort[this.currentPeriod]})`;
+    }
+  }
+
+  renderKPIs(analysis) {
+    document.getElementById('kpiTotalGaps').innerText = analysis.totalGaps;
+    document.getElementById('kpiOverallRate').innerText = `${analysis.overallGapRate}%`;
+    
+    const worstSec = analysis.highestGapSection;
+    document.getElementById('kpiTopSection').innerText = worstSec ? `${worstSec.name} (${worstSec.countOfGap})` : 'None';
+    
+    const openGapsCount = analysis.sections.reduce((acc, s) => acc + s.openGaps, 0);
+    document.getElementById('kpiOpenGaps').innerText = openGapsCount;
+  }
+
+  // Render Table (Page 1): Section | Count of Gap | %
+  renderTable(analysis) {
+    const tbody = document.getElementById('sectionTableBody');
+    if (!tbody) return;
+
+    let html = '';
+    analysis.sections.forEach((s) => {
+      const statusBadgeClass = s.statusLevel === 'critical' ? 'high' : (s.statusLevel === 'warning' ? 'medium' : 'low');
+      const countBadgeClass = s.countOfGap === 0 ? 'zero' : statusBadgeClass;
+
+      html += `
+        <tr>
+          <td style="font-weight: 700; color: #64748b;">${s.number}</td>
+          <td>
+            <div class="sec-name-cell">
+              <span class="sec-code-badge">${s.code}</span>
+              <div>
+                <div class="sec-title">${s.name}</div>
+                <div class="sec-cat">${s.category}</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span class="gap-count-badge ${countBadgeClass}">
+              ${s.countOfGap}
+            </span>
+          </td>
+          <td>
+            <div class="rate-progress-wrapper">
+              <span class="rate-val">${s.gapRatePercent}%</span>
+              <div class="rate-bar-bg">
+                <div class="rate-bar-fill ${s.statusLevel}" style="width: ${Math.min(s.gapRatePercent * 3.5, 100)}%;"></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span style="font-size: 0.825rem; font-weight: 600; color: #475569;">
+              ${s.gapSharePercent}%
+            </span>
+          </td>
+          <td>
+            <div class="severity-pills">
+              ${s.criticalGaps > 0 ? `<span class="sev-pill crit" title="Critical">${s.criticalGaps}C</span>` : ''}
+              ${s.majorGaps > 0 ? `<span class="sev-pill maj" title="Major">${s.majorGaps}M</span>` : ''}
+              ${s.minorGaps > 0 ? `<span class="sev-pill min" title="Minor">${s.minorGaps}m</span>` : ''}
+              ${s.countOfGap === 0 ? '<span style="color:#94a3b8; font-size:0.75rem;">None</span>' : ''}
+            </div>
+          </td>
+          <td>
+            <span style="font-size: 0.8rem; font-weight: 600; color: ${s.openGaps > 0 ? '#dc2626' : '#16a34a'};">
+              ${s.openGaps > 0 ? `${s.openGaps} Open` : 'Clear'}
+            </span>
+          </td>
+          <td>
+            <div style="display: flex; gap: 0.35rem;">
+              <button class="btn btn-secondary btn-sm" onclick="app.openSectionDetailsModal('${s.id}')" title="View Gaps & Details">
+                🔍 Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="app.quickAddForSection('${s.id}')" title="Log False / Gap">
+                + Add False
+              </button>
+            </div>
+          </td>
+        </tr>
+      `;
+    });
+
+    tbody.innerHTML = html;
+  }
+
+  getFilteredChartAnalysis(analysis) {
+    const filteredSections = analysis.sections.filter(s => this.selectedChartSectionIds.has(s.id));
+    return {
+      ...analysis,
+      sections: filteredSections
+    };
+  }
+
+  renderChartSectionChips(analysis) {
+    const chipsContainer = document.getElementById('chartSectionChips');
+    const countBadge = document.getElementById('chartFilterCountBadge');
+    const totalCount = analysis.sections.length;
+    const selectedCount = analysis.sections.filter(s => this.selectedChartSectionIds.has(s.id)).length;
+
+    if (countBadge) {
+      countBadge.innerText = `Showing ${selectedCount} / ${totalCount} Sections`;
+    }
+
+    if (!chipsContainer) return;
+    chipsContainer.innerHTML = analysis.sections.map(s => {
+      const isActive = this.selectedChartSectionIds.has(s.id);
+      return `
+        <button type="button" class="section-chip ${isActive ? 'active' : ''}" onclick="app.toggleChartSectionChip('${s.id}')" title="Toggle ${s.name} in bar chart">
+          <span>${s.name}</span>
+          <span class="chip-count">${s.countOfGap}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
+  onChartDropdownFilter(value) {
+    const analysis = window.gapDataStore.getSectionAnalysis(this.currentPeriod);
+    if (value === 'all') {
+      this.selectedChartSectionIds = new Set(analysis.sections.map(s => s.id));
+    } else if (value === 'with-gaps') {
+      this.selectedChartSectionIds = new Set(analysis.sections.filter(s => s.countOfGap > 0).map(s => s.id));
+    } else if (value.startsWith('cat:')) {
+      const cat = value.slice(4);
+      this.selectedChartSectionIds = new Set(analysis.sections.filter(s => s.category === cat).map(s => s.id));
+    } else if (value.startsWith('sec:')) {
+      const secId = value.slice(4);
+      this.selectedChartSectionIds = new Set([secId]);
+    }
+    this.renderChart(analysis);
+    this.renderLeaderboard(analysis);
+  }
+
+  toggleChartSectionChip(sectionId) {
+    if (this.selectedChartSectionIds.has(sectionId)) {
+      this.selectedChartSectionIds.delete(sectionId);
+    } else {
+      this.selectedChartSectionIds.add(sectionId);
+    }
+
+    const analysis = window.gapDataStore.getSectionAnalysis(this.currentPeriod);
+    const dropdown = document.getElementById('chartSectionDropdown');
+    if (dropdown) {
+      if (this.selectedChartSectionIds.size === analysis.sections.length) {
+        dropdown.value = 'all';
+      } else if (this.selectedChartSectionIds.size === 1) {
+        const onlyId = Array.from(this.selectedChartSectionIds)[0];
+        dropdown.value = `sec:${onlyId}`;
+      } else {
+        dropdown.value = 'custom';
+      }
+    }
+
+    this.renderChart(analysis);
+    this.renderLeaderboard(analysis);
+  }
+
+  selectAllChartSections() {
+    const dropdown = document.getElementById('chartSectionDropdown');
+    if (dropdown) dropdown.value = 'all';
+    this.onChartDropdownFilter('all');
+  }
+
+  selectGapOnlyChartSections() {
+    const dropdown = document.getElementById('chartSectionDropdown');
+    if (dropdown) dropdown.value = 'with-gaps';
+    this.onChartDropdownFilter('with-gaps');
+  }
+
+  // Render Bar Chart (Page 2)
+  renderChart(analysis = null) {
+    if (!analysis) analysis = window.gapDataStore.getSectionAnalysis(this.currentPeriod);
+    this.renderChartSectionChips(analysis);
+    const filtered = this.getFilteredChartAnalysis(analysis);
+    if (this.chartEngine) {
+      this.chartEngine.setData(filtered, this.chartMetric, this.chartType);
+    }
+  }
+
+  renderLeaderboard(analysis) {
+    const list = document.getElementById('leaderboardList');
+    if (!list) return;
+
+    const filtered = this.getFilteredChartAnalysis(analysis);
+    if (filtered.sections.length === 0) {
+      list.innerHTML = `<div style="padding: 1.5rem; text-align: center; color: #94a3b8; font-size: 0.85rem;">No sections selected in filter.</div>`;
+      return;
+    }
+
+    const sorted = [...filtered.sections].sort((a, b) => b.countOfGap - a.countOfGap || b.gapRatePercent - a.gapRatePercent);
+    let html = '';
+
+    sorted.slice(0, 5).forEach((s, idx) => {
+      const rankClass = idx === 0 ? 'top1' : (idx === 1 ? 'top2' : (idx === 2 ? 'top3' : ''));
+      html += `
+        <div class="section-rank-item" onclick="app.openSectionDetailsModal('${s.id}')" style="cursor: pointer;">
+          <div class="rank-left">
+            <span class="rank-num ${rankClass}">#${idx + 1}</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.875rem;">${s.name}</div>
+              <div style="font-size: 0.725rem; color: #64748b;">${s.category}</div>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-weight: 800; color: ${s.countOfGap > 0 ? '#b91c1c' : '#16a34a'}; font-size: 0.9rem;">
+              ${s.countOfGap} Gaps
+            </div>
+            <div style="font-size: 0.725rem; color: #64748b;">
+              ${s.gapRatePercent}% rate
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    list.innerHTML = html;
+  }
+
+  // Quick Add Gap
+  quickAddForSection(sectionId) {
+    this.openAddGapModal(sectionId);
+  }
+
+  openAddGapModal(defaultSectionId = null) {
+    const modal = document.getElementById('newGapModal');
+    if (!modal) return;
+    
+    if (defaultSectionId) {
+      document.getElementById('gapSectionSelect').value = defaultSectionId;
+    }
+    document.getElementById('gapDate').value = typeof formatLocalDate === 'function'
+      ? formatLocalDate(new Date())
+      : new Date().toISOString().split('T')[0];
+    document.getElementById('gapTitle').value = '';
+    document.getElementById('gapDesc').value = '';
+    document.getElementById('gapAction').value = '';
+    this.pendingImages = [];
+    this.renderPendingImagePreviews();
+
+    modal.classList.add('active');
+  }
+
+  closeModal(modalId) {
+    const m = document.getElementById(modalId);
+    if (m) m.classList.remove('active');
+  }
+
+  // Compress and encode uploaded image file to stay lightweight in localStorage
+  compressImageFile(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error('Failed to read image file'));
+      reader.onload = (ev) => {
+        const rawDataUrl = ev.target.result;
+        const img = new Image();
+        img.onerror = () => {
+          // Fallback to raw DataURL if browser cannot decode via Image/Canvas
+          resolve({
+            id: 'img-' + Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+            name: file.name || 'evidence.jpg',
+            dataUrl: rawDataUrl
+          });
+        };
+        img.onload = () => {
+          const maxDim = 1024;
+          let width = img.naturalWidth || img.width;
+          let height = img.naturalHeight || img.height;
+          if (width > maxDim || height > maxDim) {
+            if (width >= height) {
+              height = Math.round((height * maxDim) / width);
+              width = maxDim;
+            } else {
+              width = Math.round((width * maxDim) / height);
+              height = maxDim;
+            }
+          }
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, width, height);
+            ctx.drawImage(img, 0, 0, width, height);
+            const compressed = canvas.toDataURL('image/jpeg', 0.78);
+            resolve({
+              id: 'img-' + Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+              name: file.name || 'evidence.jpg',
+              dataUrl: compressed
+            });
+          } catch (err) {
+            resolve({
+              id: 'img-' + Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+              name: file.name || 'evidence.jpg',
+              dataUrl: rawDataUrl
+            });
+          }
+        };
+        img.src = rawDataUrl;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async handleImageFilesSelected(fileList, targetMode = 'modal', gapId = null) {
+    const imageFiles = Array.from(fileList).filter(f => f.type && f.type.startsWith('image/'));
+    if (imageFiles.length === 0) {
+      this.showToast('Please select valid image files (JPG, PNG, WebP).');
+      return;
+    }
+
+    const processed = [];
+    for (const file of imageFiles) {
+      try {
+        const item = await this.compressImageFile(file);
+        processed.push(item);
+      } catch (e) {
+        console.error('Image processing error:', e);
+      }
+    }
+
+    if (targetMode === 'modal') {
+      this.pendingImages.push(...processed);
+      this.renderPendingImagePreviews();
+      this.showToast(`Added ${processed.length} photo(s) to finding.`);
+    } else if (targetMode === 'existing' && gapId) {
+      window.gapDataStore.addImagesToGap(gapId, processed);
+      this.pendingAttachGapId = null;
+      this.render();
+      this.showToast(`Attached ${processed.length} evidence photo(s)!`);
+    }
+  }
+
+  renderPendingImagePreviews() {
+    const list = document.getElementById('gapImagePreviewList');
+    if (!list) return;
+    if (this.pendingImages.length === 0) {
+      list.innerHTML = '';
+      return;
+    }
+    list.innerHTML = this.pendingImages.map((img, idx) => `
+      <div class="upload-thumb-item" title="${img.name}">
+        <img src="${img.dataUrl}" alt="${img.name}">
+        <button type="button" class="upload-thumb-remove" onclick="app.removePendingImage(${idx})" title="Remove photo">&times;</button>
+      </div>
+    `).join('');
+  }
+
+  removePendingImage(index) {
+    this.pendingImages.splice(index, 1);
+    this.renderPendingImagePreviews();
+  }
+
+  triggerAttachPhoto(gapId) {
+    this.pendingAttachGapId = gapId;
+    const input = document.getElementById('existingGapPhotoInput');
+    if (input) input.click();
+  }
+
+  handleSaveNewGap() {
+    const sectionId = document.getElementById('gapSectionSelect').value;
+    const title = document.getElementById('gapTitle').value.trim();
+    const date = document.getElementById('gapDate').value;
+    const category = document.getElementById('gapCategory').value;
+    const severity = document.getElementById('gapSeverity').value;
+    const auditor = document.getElementById('gapAuditor').value.trim() || 'Lead Inspector';
+    const description = document.getElementById('gapDesc').value.trim();
+    const correctiveAction = document.getElementById('gapAction').value.trim();
+
+    if (!title) {
+      alert('Please enter a gap title / issue description.');
+      return;
+    }
+
+    const uploadedCount = this.pendingImages.length;
+
+    window.gapDataStore.addGap({
+      sectionId,
+      title,
+      date,
+      category,
+      severity,
+      auditor,
+      description,
+      correctiveAction,
+      images: [...this.pendingImages],
+      status: 'Open'
+    });
+
+    this.pendingImages = [];
+    this.renderPendingImagePreviews();
+    this.closeModal('newGapModal');
+    this.render();
+    this.showToast(`Logged new False/Gap: "${title}"${uploadedCount > 0 ? ` (${uploadedCount} photo${uploadedCount > 1 ? 's' : ''})` : ''}`);
+  }
+
+  // Full-Page Section Details View
+  openSectionDetailsModal(sectionId) {
+    const sec = window.gapDataStore.getSectionById(sectionId);
+    if (!sec) return;
+
+    this.activeSectionId = sectionId;
+
+    const statusFilter = document.getElementById('secPageStatusFilter');
+    if (statusFilter) statusFilter.value = 'all';
+
+    this.switchView('section-detail');
+    this.renderSectionDetailsPage();
+  }
+
+  goBackFromSectionDetail() {
+    this.switchView(this.previousView || 'table');
+  }
+
+  renderSectionDetailsPage(analysis = null) {
+    if (!this.activeSectionId) return;
+    const sec = window.gapDataStore.getSectionById(this.activeSectionId);
+    if (!sec) return;
+
+    if (!analysis) {
+      analysis = window.gapDataStore.getSectionAnalysis(this.currentPeriod);
+    }
+    const secData = analysis.sections.find(s => s.id === this.activeSectionId);
+
+    document.getElementById('secPageTitle').innerText = `${sec.code} - ${sec.name}`;
+    document.getElementById('secPageCat').innerText = `${sec.category} • ${sec.desc}`;
+    document.getElementById('secPageCount').innerText = secData ? secData.countOfGap : 0;
+    document.getElementById('secPageRate').innerText = secData ? `${secData.gapRatePercent}%` : '0%';
+    document.getElementById('secPageChecksSub').innerText = secData ? `${secData.totalChecks} evaluated checkpoints` : 'Evaluated checkpoints';
+    document.getElementById('secPageOpen').innerText = secData ? secData.openGaps : 0;
+    document.getElementById('secPageResolved').innerText = secData ? secData.resolvedGaps : 0;
+
+    const switcher = document.getElementById('secPageSwitcher');
+    if (switcher) switcher.value = this.activeSectionId;
+
+    const addBtn = document.getElementById('secPageAddGapBtn');
+    if (addBtn) {
+      addBtn.onclick = () => this.openAddGapModal(this.activeSectionId);
+    }
+
+    const statusFilterEl = document.getElementById('secPageStatusFilter');
+    const statusFilter = statusFilterEl ? statusFilterEl.value : 'all';
+
+    let gaps = secData ? [...secData.gaps] : [];
+    if (statusFilter !== 'all') {
+      gaps = gaps.filter(g => g.status === statusFilter);
+    }
+
+    const listEl = document.getElementById('secPageGapsList');
+    if (gaps.length > 0) {
+      let html = '<div class="gap-detail-grid">';
+      gaps.forEach(g => {
+        const sevClass = g.severity === 'Critical' ? 'crit' : (g.severity === 'Major' ? 'maj' : 'min');
+        const statusColor = g.status === 'Resolved' ? '#059669' : (g.status === 'In Progress' ? '#d97706' : '#dc2626');
+        const images = Array.isArray(g.images) ? g.images : [];
+        const evidenceHtml = images.length > 0 ? `
+          <div class="gap-evidence-section">
+            <div class="gap-evidence-label">
+              <span>📷</span> Evidence Photos (${images.length}) — Click to Preview
+            </div>
+            <div class="gap-evidence-strip">
+              ${images.map((img, idx) => `
+                <div class="gap-evidence-thumb" onclick="app.openLightbox('${g.id}', ${idx})" title="Click to preview ${img.name || 'photo'}">
+                  <img src="${img.dataUrl}" alt="${img.name || 'Evidence photo'}">
+                  <span class="gap-evidence-zoom">🔍</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : '';
+
+        html += `
+          <div class="gap-detail-card">
+            <div>
+              <div class="gap-detail-card-head">
+                <div class="gap-detail-card-title">${g.title}</div>
+                <span class="sev-pill ${sevClass}">${g.severity}</span>
+              </div>
+              <div class="gap-detail-card-meta" style="margin-top: 0.35rem; margin-bottom: 0.65rem;">
+                Logged on <strong>${g.date}</strong> by ${g.auditor} • Category: ${g.category} • Status: <strong style="color: ${statusColor};">${g.status}</strong>
+              </div>
+              <p class="gap-detail-card-desc">${g.description || 'No additional description provided.'}</p>
+              ${g.correctiveAction ? `<div class="gap-detail-action-box" style="margin-top: 0.75rem;"><strong>Action:</strong> ${g.correctiveAction}</div>` : ''}
+              ${evidenceHtml}
+            </div>
+            <div class="gap-detail-card-footer">
+              <span style="font-size: 0.75rem; color: #94a3b8; font-family: ui-monospace, monospace;">${g.id}</span>
+              <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm" onclick="app.triggerAttachPhoto('${g.id}')" title="Upload evidence photos for this false finding">📷 + Photo</button>
+                ${g.status !== 'Resolved' ? `
+                  <button class="btn btn-secondary btn-sm" onclick="app.markGapResolved('${g.id}')">✓ Mark Resolved</button>
+                ` : `
+                  <span style="font-size: 0.8rem; color: #059669; font-weight: 700;">✓ Resolved</span>
+                `}
+                <button class="btn btn-secondary btn-sm" style="color: #dc2626;" onclick="app.deleteGapRecord('${g.id}')">Delete</button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+      listEl.innerHTML = html;
+    } else {
+      listEl.innerHTML = `
+        <div style="text-align: center; padding: 3.5rem 1.5rem; color: #94a3b8;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.65rem;">🎉</div>
+          <div style="font-weight: 700; font-size: 1.05rem; color: #334155;">No Gaps Recorded for ${sec.name} ${statusFilter !== 'all' ? `(${statusFilter})` : 'in this period'}</div>
+          <p style="font-size: 0.85rem; margin-top: 0.35rem;">Section meets 100% compliance standards for the selected filter.</p>
+        </div>
+      `;
+    }
+  }
+
+  markGapResolved(gapId) {
+    window.gapDataStore.updateGap(gapId, { status: 'Resolved' });
+    this.render();
+    this.showToast('Gap marked as Resolved!');
+  }
+
+  deleteGapRecord(gapId) {
+    if (confirm('Delete this gap entry?')) {
+      window.gapDataStore.deleteGap(gapId);
+      this.render();
+      this.showToast('Gap record deleted.');
+    }
+  }
+
+  // Full-Screen Evidence Image Lightbox
+  openLightbox(gapId, index = 0) {
+    const gap = window.gapDataStore.gaps.find(g => g.id === gapId);
+    if (!gap || !Array.isArray(gap.images) || gap.images.length === 0) return;
+
+    this.lightboxState = {
+      gapId,
+      index: Math.max(0, Math.min(index, gap.images.length - 1))
+    };
+    this.renderLightbox();
+    const modal = document.getElementById('imageLightboxModal');
+    if (modal) modal.classList.add('active');
+  }
+
+  renderLightbox() {
+    const { gapId, index } = this.lightboxState;
+    const gap = window.gapDataStore.gaps.find(g => g.id === gapId);
+    if (!gap || !Array.isArray(gap.images) || gap.images.length === 0) {
+      this.closeLightbox();
+      return;
+    }
+
+    const safeIdx = Math.max(0, Math.min(index, gap.images.length - 1));
+    this.lightboxState.index = safeIdx;
+    const img = gap.images[safeIdx];
+    const sec = window.gapDataStore.getSectionById(gap.sectionId);
+
+    document.getElementById('lightboxImage').src = img.dataUrl;
+    document.getElementById('lightboxTitle').innerText = `${gap.title}`;
+    document.getElementById('lightboxMeta').innerText = `${sec ? sec.name : ''} • ${gap.date} • Photo ${safeIdx + 1} of ${gap.images.length} (${img.name || 'evidence.jpg'})`;
+
+    const prevBtn = document.getElementById('lightboxPrevBtn');
+    const nextBtn = document.getElementById('lightboxNextBtn');
+    const showNav = gap.images.length > 1;
+    if (prevBtn) prevBtn.style.display = showNav ? 'flex' : 'none';
+    if (nextBtn) nextBtn.style.display = showNav ? 'flex' : 'none';
+
+    const dlBtn = document.getElementById('lightboxDownloadBtn');
+    if (dlBtn) {
+      dlBtn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = img.dataUrl;
+        a.download = img.name || `${gap.id}_photo_${safeIdx + 1}.jpg`;
+        a.click();
+      };
+    }
+
+    const delBtn = document.getElementById('lightboxDeleteBtn');
+    if (delBtn) {
+      delBtn.onclick = () => {
+        if (confirm('Remove this evidence photo from the false finding?')) {
+          window.gapDataStore.removeImageFromGap(gap.id, img.id);
+          this.render();
+          const updatedGap = window.gapDataStore.gaps.find(g => g.id === gap.id);
+          if (!updatedGap || !updatedGap.images || updatedGap.images.length === 0) {
+            this.closeLightbox();
+          } else {
+            this.lightboxState.index = Math.min(safeIdx, updatedGap.images.length - 1);
+            this.renderLightbox();
+          }
+          this.showToast('Evidence photo removed.');
+        }
+      };
+    }
+  }
+
+  navigateLightbox(delta) {
+    const gap = window.gapDataStore.gaps.find(g => g.id === this.lightboxState.gapId);
+    if (!gap || !Array.isArray(gap.images) || gap.images.length <= 1) return;
+    const len = gap.images.length;
+    this.lightboxState.index = (this.lightboxState.index + delta + len) % len;
+    this.renderLightbox();
+  }
+
+  closeLightbox() {
+    const modal = document.getElementById('imageLightboxModal');
+    if (modal) modal.classList.remove('active');
+    const imgEl = document.getElementById('lightboxImage');
+    if (imgEl) imgEl.src = '';
+  }
+
+  // Registry / All Gaps Table
+  renderRegistry() {
+    const list = document.getElementById('registryTableBody');
+    if (!list) return;
+
+    const filterSec = document.getElementById('registryFilterSection').value;
+    const filterStatus = document.getElementById('registryFilterStatus').value;
+    const searchVal = document.getElementById('registrySearch').value.toLowerCase().trim();
+
+    let gaps = [...window.gapDataStore.gaps];
+
+    if (filterSec && filterSec !== 'all') {
+      gaps = gaps.filter(g => g.sectionId === filterSec);
+    }
+    if (filterStatus && filterStatus !== 'all') {
+      gaps = gaps.filter(g => g.status === filterStatus);
+    }
+    if (searchVal) {
+      gaps = gaps.filter(g => 
+        g.title.toLowerCase().includes(searchVal) || 
+        g.description.toLowerCase().includes(searchVal) ||
+        g.auditor.toLowerCase().includes(searchVal)
+      );
+    }
+
+    if (gaps.length === 0) {
+      list.innerHTML = `<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #94a3b8;">No matching gap records found.</td></tr>`;
+      return;
+    }
+
+    let html = '';
+    gaps.forEach(g => {
+      const sec = window.gapDataStore.getSectionById(g.sectionId);
+      const sevClass = g.severity === 'Critical' ? 'crit' : (g.severity === 'Major' ? 'maj' : 'min');
+      const photoCount = Array.isArray(g.images) ? g.images.length : 0;
+      const photoBadge = photoCount > 0
+        ? ` <button class="btn btn-secondary btn-sm" style="padding: 0.1rem 0.45rem; font-size: 0.7rem; margin-left: 0.35rem;" onclick="app.openLightbox('${g.id}', 0)" title="Preview evidence photos">📷 ${photoCount}</button>`
+        : '';
+      html += `
+        <tr>
+          <td><span class="sec-code-badge">${sec ? sec.code : '-'}</span> <strong>${sec ? sec.name : ''}</strong></td>
+          <td><strong>${g.title}</strong>${photoBadge}<div style="font-size: 0.725rem; color: #64748b;">${(g.description || '').substring(0, 70)}${g.description && g.description.length > 70 ? '...' : ''}</div></td>
+          <td>${g.date}</td>
+          <td><span class="sev-pill ${sevClass}">${g.severity}</span></td>
+          <td><span style="font-weight: 700; color: ${g.status === 'Resolved' ? '#16a34a' : '#dc2626'}">${g.status}</span></td>
+          <td>${g.auditor}</td>
+          <td>
+            <button class="btn btn-secondary btn-sm" onclick="app.openSectionDetailsModal('${g.sectionId}')">View</button>
+          </td>
+        </tr>
+      `;
+    });
+    list.innerHTML = html;
+  }
+
+  downloadExcel() {
+    const xlsxBytes = window.gapDataStore.exportExcel(this.currentPeriod);
+    const blob = new Blob([xlsxBytes], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `rmp_gap_analysis_${this.currentPeriod}_${Date.now()}.xlsx`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    this.showToast('Excel workbook (.xlsx) exported successfully!');
+  }
+
+  showToast(message) {
+    const container = document.getElementById('toastContainer');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `<span>✓</span><span>${message}</span>`;
+    container.appendChild(toast);
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => toast.remove(), 300);
+    }, 2800);
+  }
+}
+
+// Global initialization
+window.addEventListener('DOMContentLoaded', () => {
+  window.app = new GapApp();
+});
+
+  </script>
+
+</body>
+</html>
